@@ -7,7 +7,9 @@ User.create!([
 		email: "danieloddl2@hotmail.com",
 		city: "San Luis Potosí", 
 		country: "Mexico",
-		birth_date: 18.years.ago - 52.days
+		birth_date: 18.years.ago - 52.days,
+		gmail: "danieloddl2@gmail.com",
+		skype: "danielolivaresd"
 	},
 	{
 		username: "El_Gaddys",
@@ -16,7 +18,9 @@ User.create!([
 		email: "gaddyel@gmail.com",
 		city: "San Luis Potosí", 
 		country: "Mexico",
-		birth_date: 24.years.ago + 52.days	
+		birth_date: 24.years.ago + 52.days,
+		gmail: "gaddyel@gmail.com",
+		skype: "gaddyel"
 	}])
 
 Language.destroy_all
@@ -77,6 +81,7 @@ Offer.create!([{
 		session_mode: "Real",
 		start_date: 1.day.from_now,
 		end_date: 20.days.from_now,
+		meeting_point: "Av. Carranza 220",
 		city: "San Luis Potosi"
 	}])
 

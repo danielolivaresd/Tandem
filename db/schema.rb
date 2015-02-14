@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150214005013) do
+ActiveRecord::Schema.define(version: 20150214014729) do
 
   create_table "language_interests", force: :cascade do |t|
     t.integer  "user_id"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20150214005013) do
     t.string   "city"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.string   "meeting_point"
   end
 
   add_index "offers", ["user_language_id"], name: "index_offers_on_user_language_id"
@@ -74,6 +75,8 @@ ActiveRecord::Schema.define(version: 20150214005013) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.date     "birth_date"
+    t.string   "gmail"
+    t.string   "skype"
   end
 
 end
