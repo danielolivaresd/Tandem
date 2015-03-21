@@ -1,0 +1,67 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= devise_error_messages! %>
+
+<div class="field">
+  <%= f.label :email %><br />
+  <%= f.email_field :email, autofocus: true %>
+</div>
+
+<div class="field">
+  <%= f.label :password %>
+  <% if @validatable %>
+  <em>(<%= @minimum_password_length %> characters minimum)</em>
+  <% end %><br />
+  <%= f.password_field :password, autocomplete: "off" %>
+</div>
+
+<div class="field">
+  <%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation, autocomplete: "off" %>
+</div>
+
+<div class="field">
+  <%= f.label :first_name %><br />
+  <%= f.text_field :first_name %>
+</div>
+
+<div class="field">
+  <%= f.label :last_name %><br />
+  <%= f.text_field :last_name %>
+</div>
+
+<div class="field">
+  <%= f.label :first_name %><br />
+  <%= f.date_select :date_of_birth, start_year: Time.now.year-100, end_year: Time.now.year %>
+</div>
+
+<div class="field">
+  <%= f.label :country %><br />
+  <%= f.text_field :country, autocomplete: "on" %>
+</div>
+
+<div class="field">
+  <%= f.label :state %><br />
+  <%= f.text_field :state, autocomplete: "on" %>
+</div>
+
+<div class="field">
+  <%= f.label :city %><br />
+  <%= f.text_field :city, autocomplete: "on" %>
+</div>
+
+Sex<br />
+<%= f.radio_button(:sex, "Male") %>
+<%= f.label(:sex, "Male") %>
+<%= f.radio_button(:sex, "Female") %>
+<%= f.label(:sex, "Female") %>
+<%= f.radio_button(:sex, "Other") %>
+<%= f.label(:sex, "Other") %>
+
+<div class="actions">
+  <%= f.submit "Sign up" %>
+</div>
+<% end %>
+
+<%= render "devise/shared/links" %>
