@@ -45,3 +45,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #Devise for user authentication
 gem 'devise'
+
+#Paperclip for user avatars
+gem "paperclip"
+# gem 'rmagick'
