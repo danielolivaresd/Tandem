@@ -11,7 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150322004331) do
+ActiveRecord::Schema.define(version: 20150408202253) do
+
+  create_table "language_interests", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "language_id"
+    t.integer  "actual_level"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "language_interests", ["language_id"], name: "index_language_interests_on_language_id"
+  add_index "language_interests", ["user_id"], name: "index_language_interests_on_user_id"
+
+  create_table "languages", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_languages", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "language_id"
+    t.integer  "level"
+    t.boolean  "is_native"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "user_languages", ["language_id"], name: "index_user_languages_on_language_id"
+  add_index "user_languages", ["user_id"], name: "index_user_languages_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
