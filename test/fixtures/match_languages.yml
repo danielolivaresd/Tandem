@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  match_id: 
+  language_id: 
+  teacher_id: 1
+  student_id: 1
+
+two:
+  match_id: 
+  language_id: 
+  teacher_id: 1
+  student_id: 1

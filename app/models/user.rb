@@ -8,5 +8,7 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   has_many :user_languages
   has_many :languages, through: :user_languages
-  has_many :language_interests
+  has_many :language_interest
+  has_many :match_users
+  has_many :matches, through: :match_users
 end
