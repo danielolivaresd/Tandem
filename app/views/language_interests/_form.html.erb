@@ -1,0 +1,25 @@
+<%= form_for(@language_interest) do |f| %>
+  <% if @language_interest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@language_interest.errors.count, "error") %> prohibited this language_interest from being saved:</h2>
+
+      <ul>
+      <% @language_interest.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.select :language_id, @all_languages.map {|language| [language.name, language.id]} %>
+  </div>
+
+  <div class="field">
+    <%= f.select :actual_level, ((0..10).map {|i| [i,i] }) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

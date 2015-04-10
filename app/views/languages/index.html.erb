@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Known</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Level</th>
+      <th>Native?</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user.user_languages.each do |language| %>
+      <tr>
+        <td><%= language.language.name %></td>
+        <td><%= language.level %></td>
+        <td><%= "Yes" if language.is_native %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h1>Interests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Level</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user.language_interests.each do |language| %>
+      <tr>
+        <td><%= language.language.name %></td>
+        <td><%= language.actual_level %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

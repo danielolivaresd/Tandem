@@ -1,3 +1,31 @@
+User.destroy_all
+User.create!([
+	{
+		email:"a@a.com",
+		password: "password",
+		first_name: "A",
+		last_name: "Nice Guy",
+		date_of_birth: 10.years.from_now,
+		country: "Mexico",
+		state: "San Luis Potosi",
+		city: "San Luis Potosi",
+		sex: "Male",
+		avatar: File.new("#{Rails.root}/app/assets/images/daniel.png")
+	},
+	{
+		email:"b@a.com",
+		password: "password",
+		first_name: "A",
+		last_name: "Nice Guy",
+		date_of_birth: 10.years.from_now,
+		country: "Mexico",
+		state: "San Luis Potosi",
+		city: "San Luis Potosi",
+		sex: "Male",
+		avatar: File.new("#{Rails.root}/app/assets/images/daniel.png")
+	}
+])
+
 Language.destroy_all
 Language.create!([
 	{
@@ -32,7 +60,35 @@ UserLanguage.create!([
 		level: 3,
 		is_native: false
 	},
+	{
+		user: User.last,
+		language: spanish,
+		level: 10,
+		is_native: true
+	},
+	{
+		user: User.last,
+		language: english,
+		level: 3,
+		is_native: false
+	}
 ])
 
+LanguageInterest.destroy_all
+LanguageInterest.create!([
+	{
+		user: User.first,
+		language: spanish,
+		actual_level: 3
+	},
+	{
+		user: User.last,
+		language: english,
+		actual_level: 3
+	},
+])
+
+p "#{User.all.count} users created."
 p "#{Language.all.count} languages created."
 p "#{UserLanguage.all.count} user languages created."
+p "#{LanguageInterest.all.count} language interests created."

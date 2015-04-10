@@ -1,0 +1,33 @@
+<%= form_for(@user_language) do |f| %>
+  <% if @user_language.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_language.errors.count, "error") %> prohibited this user_language from being saved:</h2>
+
+      <ul>
+      <% @user_language.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- user language level is_native -->
+
+  <div class="field">
+    <%= f.select :language_id, @all_languages.map {|language| [language.name, language.id]} %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Level" %>
+    <%= f.select :level, ((0..10).map {|i| [i,i] }) %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Is this tongue native?" %>
+    <%= f.check_box :is_native %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
