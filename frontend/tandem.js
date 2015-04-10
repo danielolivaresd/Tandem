@@ -1,13 +1,9 @@
 
-function n() {
+function n(a) {
     
-    window.open ('unete2.html','_self',false);
+    window.open (a,'_self',false);
 }
 
-function b() {
-    
-    window.open ('unete.html','_self',false);
-}
 
 function add(tab){
 	var table = document.getElementById(tab);
@@ -17,4 +13,17 @@ function add(tab){
     cell1.innerHTML = "<input type='text' placeholder='Language' style='width:200px !important;'><br> <select><option value='n'>Level</option><option value='beg'>Beginner</option><option value='adv'>Advanced</option><option value='mas'>Master</option></select>";
     					
     
+}
+
+function timetable(a){
+	var c = document.getElementById(a).style.backgroundColor;
+	
+	if (c== 'transparent' || c == "") {
+		document.getElementById(a).style.backgroundColor ='#1abc9c';
+		
+	}else{
+		document.getElementById(a).style.backgroundColor ='transparent';
+		
+	}
+	
 }
