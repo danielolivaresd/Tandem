@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	
+	<title>Tandem</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="HandheldFriendly" content="true">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+	
+	<!-- Import CSS -->
+	<link rel="stylesheet" href="css/base.css">
+	<!--[if lt IE 10]>
+		<link href= "css/ie.css" rel= "stylesheet" media= "all" />
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+</head>
+
+<body>
+
+	<div class="wrapper2">
+	
+		<!-- Start Sticky Navigation -->
+		<nav id="mainnav">
+			<div class="container">
+				<div class="row">
+					<div class="span4">
+						
+					</div>
+					<div class="span8">
+						<ul id="fluid-nav" class="fluid-navigation visible-desktop">
+							<li><a href="index.html">Tandem</a></li>
+							
+							<li class="current"><a>Únete</a></li>
+							<li><a class="scroll-link" href="login.html">Log In</a></li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!-- End Sticky Navigation -->
+		
+		<!-- Start About Page -->
+		<section  class="page page-gray center">
+			<div class="container">
+				<div class="row">
+					<div class="span12 ">
+						<div class="title"> <span class="color-text">Schedule</span> </div>
+						<hr>
+						<div class="lead" align="center">Selected time for your tandems.</div>
+						<br><br>
+					</div>
+
+					<div class="span4 left" >
+						
+						<img class="user" style="width:150px" src="img/user-default.jpg"><br> 
+						<br><br>
+						<p>Ilse Alejo</p>
+						<p>1234</p>
+						<p>ilse.alejo@gmail.com</p>
+						<p>nosoyilse</p>
+						<p>México</p>
+							
+						<br><br>	
+						<button  type="button" onclick="n('profile.html')">Back</button>
+							
+						</form>
+						
+					</div>
+
+					<div class="span8 left">
+						<form>
+							
+							<table class="timetable" style="width:800px;">
+								<tr class="timetable">
+									<td class="timetable" >Time</td>
+									<td class="timetable">Mon</td>
+									<td class="timetable">Tue</td>
+									<td class="timetable">Wed</td>
+									<td class="timetable">Thu</td>
+									<td class="timetable">Fri</td>
+									<td class="timetable">Sat</td>
+									<td class="timetable">Sun</td>
+								</tr>
+
+								
+								<tr class="timetable">
+									<td class="timetable">8:00-9:00</td>
+									<td class="timetable" onclick="timetable('mon-89')" id="mon-89"></td>
+									<td class="timetable" onclick="timetable('tue-89')" id="tue-89"></td>
+									<td class="timetable"  onclick="timetable('wed-89')" id="wed-89"></td>
+									<td class="timetable"  onclick="timetable('thu-89')" id="thu-89"></td>
+									<td class="timetable"  onclick="timetable('fri-89')" id="fri-89"></td>
+									<td class="timetable"  onclick="timetable('sat-89')" id="sat-89"></td>
+									<td class="timetable"  onclick="timetable('sun-89')" id="sun-89"></td>
+								</tr>
+								<tr  class="timetable">
+									<td class="timetable">9:00-10:00</td>
+									<td class="timetable" onclick="timetable('mon-910')" id="mon-910"></td>
+									<td class="timetable" onclick="timetable('tue-910')" id="tue-910"></td>
+									<td class="timetable"  onclick="timetable('wed-910')" id="wed-910"></td>
+									<td class="timetable"  onclick="timetable('thu-910')" id="thu-910"></td>
+									<td class="timetable"  onclick="timetable('fri-910')" id="fri-910"></td>
+									<td class="timetable"  onclick="timetable('sat-910')" id="sat-910"></td>
+									<td class="timetable"  onclick="timetable('sun-910')" id="sun-910"></td>
+								</tr>
+								<tr class="timetable">
+									<td class="timetable">10:00-11:00</td>
+									<td class="timetable" onclick="timetable('mon-1011')" id="mon-1011"></td>
+									<td class="timetable" onclick="timetable('tue-1011')" id="tue-1011"></td>
+									<td class="timetable"  onclick="timetable('wed-1011')" id="wed-1011"></td>
+									<td class="timetable"  onclick="timetable('thu-1011')" id="thu-1011"></td>
+									<td class="timetable"  onclick="timetable('fri-1011')" id="fri-1011"></td>
+									<td class="timetable"  onclick="timetable('sat-1011')" id="sat-1011"></td>
+									<td class="timetable"  onclick="timetable('sun-1011')" id="sun-1011"></td>
+								<tr class="timetable">
+									<td class="timetable">11:00-12:00</td>
+									<td class="timetable" onclick="timetable('mon-1112')" id="mon-1112"></td>
+									<td class="timetable" onclick="timetable('tue-1112')" id="tue-1112"></td>
+									<td class="timetable"  onclick="timetable('wed-1112')" id="wed-1112"></td>
+									<td class="timetable"  onclick="timetable('thu-1112')" id="thu-1112"></td>
+									<td class="timetable"  onclick="timetable('fri-1112')" id="fri-1112"></td>
+									<td class="timetable"  onclick="timetable('sat-1112')" id="sat-1112"></td>
+									<td class="timetable"  onclick="timetable('sun-1112')" id="sun-1112"></td>
+								</tr>
+								<tr class="timetable">
+									<td class="timetable">12:00-13:00</td>
+									<td class="timetable" onclick="timetable('mon-1213')" id="mon-1213"></td>
+									<td class="timetable" onclick="timetable('tue-1213')" id="tue-1213"></td>
+									<td class="timetable"  onclick="timetable('wed-1213')" id="wed-1213"></td>
+									<td class="timetable"  onclick="timetable('thu-1213')" id="thu-1213"></td>
+									<td class="timetable"  onclick="timetable('fri-1213')" id="fri-1213"></td>
+									<td class="timetable"  onclick="timetable('sat-1213')" id="sat-1213"></td>
+									<td class="timetable"  onclick="timetable('sun-1213')" id="sun-1213"></td>
+								</tr>
+								<tr class="timetable">
+									<td class="timetable">13:00-14:00</td>
+									<td class="timetable" onclick="timetable('mon-1314')" id="mon-1314"></td>
+									<td class="timetable" onclick="timetable('tue-1314')" id="tue-1314"></td>
+									<td class="timetable"  onclick="timetable('wed-1314')" id="wed-1314"></td>
+									<td class="timetable"  onclick="timetable('thu-1314')" id="thu-1314"></td>
+									<td class="timetable"  onclick="timetable('fri-1314')" id="fri-1314"></td>
+									<td class="timetable"  onclick="timetable('sat-1314')" id="sat-1314"></td>
+									<td class="timetable"  onclick="timetable('sun-1314')" id="sun-1314"></td>
+								</tr>
+								<tr class="timetable">
+									<td class="timetable">14:00-15:00</td>
+									<td class="timetable" onclick="timetable('mon-1415')" id="mon-1415"></td>
+									<td class="timetable" onclick="timetable('tue-1415')" id="tue-1415"></td>
+									<td class="timetable"  onclick="timetable('wed-1415')" id="wed-1415"></td>
+									<td class="timetable"  onclick="timetable('thu-1415')" id="thu-1415"></td>
+									<td class="timetable"  onclick="timetable('fri-1415')" id="fri-1415"></td>
+									<td class="timetable"  onclick="timetable('sat-1415')" id="sat-1415"></td>
+									<td class="timetable"  onclick="timetable('sun-1415')" id="sun-1415"></td>
+								</tr>
+								<tr class="timetable">
+									<td class="timetable">15:00-16:00</td>
+									<td class="timetable" onclick="timetable('mon-1516')" id="mon-1516"></td>
+									<td class="timetable" onclick="timetable('tue-1516')" id="tue-1516"></td>
+									<td class="timetable"  onclick="timetable('wed-1516')" id="wed-1516"></td>
+									<td class="timetable"  onclick="timetable('thu-1516')" id="thu-1516"></td>
+									<td class="timetable"  onclick="timetable('fri-1516')" id="fri-1516"></td>
+									<td class="timetable"  onclick="timetable('sat-1516')" id="sat-1516"></td>
+									<td class="timetable"  onclick="timetable('sun-1516')" id="sun-1516"></td>
+								</tr>
+								<tr class="timetable">
+									<td class="timetable">16:00-17:00</td>
+									<td class="timetable" onclick="timetable('mon-1617')" id="mon-1617"></td>
+									<td class="timetable" onclick="timetable('tue-1617')" id="tue-1617"></td>
+									<td class="timetable"  onclick="timetable('wed-1617')" id="wed-1617"></td>
+									<td class="timetable"  onclick="timetable('thu-1617')" id="thu-1617"></td>
+									<td class="timetable"  onclick="timetable('fri-1617')" id="fri-1617"></td>
+									<td class="timetable"  onclick="timetable('sat-1617')" id="sat-1617"></td>
+									<td class="timetable"  onclick="timetable('sun-1617')" id="sun-1617"></td>
+								</tr>
+								<tr class="timetable">
+									<td class="timetable">17:00-18:00</td>
+									<td class="timetable" onclick="timetable('mon-1718')" id="mon-1718"></td>
+									<td class="timetable" onclick="timetable('tue-1718')" id="tue-1718"></td>
+									<td class="timetable"  onclick="timetable('wed-1718')" id="wed-1718"></td>
+									<td class="timetable"  onclick="timetable('thu-1718')" id="thu-1718"></td>
+									<td class="timetable"  onclick="timetable('fri-1718')" id="fri-1718"></td>
+									<td class="timetable"  onclick="timetable('sat-1718')" id="sat-1718"></td>
+									<td class="timetable"  onclick="timetable('sun-1718')" id="sun-1718"></td>
+								</tr>
+								<tr class="timetable">
+									<td class="timetable">18:00-19:00</td>
+									<td class="timetable" onclick="timetable('mon-1819')" id="mon-1819"></td>
+									<td class="timetable" onclick="timetable('tue-1819')" id="tue-1819"></td>
+									<td class="timetable"  onclick="timetable('wed-1819')" id="wed-1819"></td>
+									<td class="timetable"  onclick="timetable('thu-1819')" id="thu-1819"></td>
+									<td class="timetable"  onclick="timetable('fri-1819')" id="fri-1819"></td>
+									<td class="timetable"  onclick="timetable('sat-1819')" id="sat-1819"></td>
+									<td class="timetable"  onclick="timetable('sun-1819')" id="sun-1819"></td>
+								</tr>
+								<tr class="timetable">
+									<td class="timetable">19:00-20:00</td>
+									<td class="timetable" onclick="timetable('mon-1920')" id="mon-1920"></td>
+									<td class="timetable" onclick="timetable('tue-1920')" id="tue-1920"></td>
+									<td class="timetable"  onclick="timetable('wed-1920')" id="wed-1920"></td>
+									<td class="timetable"  onclick="timetable('thu-1920')" id="thu-1920"></td>
+									<td class="timetable"  onclick="timetable('fri-1920')" id="fri-1920"></td>
+									<td class="timetable"  onclick="timetable('sat-1920')" id="sat-1920"></td>
+									<td class="timetable"  onclick="timetable('sun-1920')" id="sun-1920"></td>
+								</tr>
+								<tr class="timetable">
+									<td class="timetable">20:00-21:00</td>
+									<td class="timetable" onclick="timetable('mon-2021')" id="mon-2021"></td>
+									<td class="timetable" onclick="timetable('tue-2021')" id="tue-2021"></td>
+									<td class="timetable"  onclick="timetable('wed-2021')" id="wed-2021"></td>
+									<td class="timetable"  onclick="timetable('thu-2021')" id="thu-2021"></td>
+									<td class="timetable"  onclick="timetable('fri-2021')" id="fri-2021"></td>
+									<td class="timetable"  onclick="timetable('sat-2021')" id="sat-2021"></td>
+									<td class="timetable"  onclick="timetable('sun-2021')" id="sun-2021"></td>
+								</tr>
+								<tr class="timetable">
+									<td class="timetable">21:00-22:00</td>
+									<td class="timetable" onclick="timetable('mon-2122')" id="mon-2122"></td>
+									<td class="timetable" onclick="timetable('tue-2122')" id="tue-2122"></td>
+									<td class="timetable"  onclick="timetable('wed-2122')" id="wed-2122"></td>
+									<td class="timetable"  onclick="timetable('thu-2122')" id="thu-2122"></td>
+									<td class="timetable"  onclick="timetable('fri-2122')" id="fri-2122"></td>
+									<td class="timetable"  onclick="timetable('sat-2122')" id="sat-2122"></td>
+									<td class="timetable"  onclick="timetable('sun-2122')" id="sun-2122"></td>
+								</tr>
+								
+							</table>
+
+
+
+
+							<div class="span6 center">
+								<br><br>
+								<button type="button" onclick="n('timetable2.html')" >Next</button>
+							</div>
+
+
+						</form>
+			
+					
+							
+					</div>
+				</div>
+			</div>
+
+		
+		</section>
+		<!-- End About Page -->
+			<section  class="page page-gray center">
+						<div class="container">
+						</div>
+						</section>
+		
+	
+		
+		
+		<!-- Start Sidebar -->
+		<section id="sidebar">
+			<div class="container">
+				<div class="row">
+					<div class="span4">
+						<h5>Vísitanos</h5>
+						
+						<strong>Teléfono:</strong> <span class="white-text">4440</span><br />
+						<strong>Dirección:</strong> <span class="white-text"></span></p>
+					</div>
+					<div class="span4">
+						
+					</div>
+					<div class="span4">
+						
+						<a clas="white-text"  target="_blank" style="color:white !important;">Privacidad de la Información</a> 
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Sidebar -->
+		
+		<section id="copyright">
+			© 2015 Desarrollado por Tandem. 
+		</section>
+
+	
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>	
+	<script src="js/jquery.sticky.js"></script><!-- Sticky Navigation -->
+	<script src="js/jquery.scrollTo.js"></script><!-- Smooth Scrolling -->
+	<script src="js/jquery.nav.js"></script><!-- One Page Navigation -->
+	<script src="js/selectnav.min.js"></script><!-- Mobile Navigation -->
+	<script type="text/javascript" src="tandem.js"></script>
+	<script src="js/jquery.parallax-1.1.3.js"></script><!-- Parallax -->
+	
+	
+	<script src="js/settings.js"></script> <!-- JS Options -->
+
+	
+  
+</body>
+
+</html>
+<!-- IDENTIQ TEMPLATE BY ILYA SIDELNIKOV AND TVDA - THEMES.TVDA.EU -->
