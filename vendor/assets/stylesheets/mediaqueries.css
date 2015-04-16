@@ -1,0 +1,436 @@
+
+
+/* --------- Desktop --------- */
+@media (min-width: 1200px) {
+
+	.lead {
+		font-size: 44px;
+		margin: 44px 0 46px 0;
+		padding-right: 35%;
+	}
+	
+		
+	#parallax3, #parallax3 .pattern {
+		height:700px;
+	}
+	
+	#parallax4 .clients {
+		padding: 0 10%;
+	}
+	
+	#contact hr.gray {
+		margin: 37px 0 36px 0;
+	}
+	
+	.services {
+		height: 400px;
+		padding: 40px;
+	}
+	
+@-moz-document url-prefix()
+{
+	.services { height: auto; box-shadow: border-box; overflow: hidden; }
+}
+	
+	.services-list {
+		font-size: 16px;
+		margin-top: 15px;
+	}
+	
+	.services-title {
+		font-size: 20px;
+	}
+	
+	.display-slider {
+		margin: 55px 0 70px 0;
+	}
+	
+	#slidecaption {
+		padding: 0 9%;
+	}
+	
+	header {
+		background-size: 100%;
+		background-position: top center;
+	}
+	
+	.bg1, .bg2, .bg3 {
+		background-size: 130%;
+	}
+	
+	.bg4 {
+		background-size: 130%;
+	}
+	
+	nav #fluid-nav li a, nav #fixed-nav li a {
+		font-size: 14px;
+	}
+	
+	nav #fluid-nav li, nav #fixed-nav li {
+		display: inline-block;
+		margin-left: 16px;
+	}
+
+	
+}
+
+
+/* --------- iPad Vertical --------- */
+@media (min-width: 768px) and (max-width: 979px) {
+
+	.laptop-slider {
+		margin-bottom: 80px;
+	}
+	
+	.display-slider {
+		height: auto;
+		background: none;
+		margin-bottom: 140px;
+	}
+	
+	.display-slider .flexslider {
+		width: 724px;
+		position: relative;
+		left: 50%;
+		margin-left: -362px;
+	}
+	
+	.lead {
+		padding-right: 0;
+	}
+	
+	.slider-text {
+		padding-right: 30%;
+	}
+	
+	.slider-title {
+		letter-spacing: 1px;
+	}
+	
+	.services {
+		height: 247px;
+		padding: 20px;
+	}
+	
+	.services-list {
+		font-size: 13px;
+		margin-top: 0;
+	}
+	
+	.clients li {
+		margin: 5px;
+	}
+	
+	.clients li img {
+		width: 130px;
+		height: auto;
+	}
+	
+	#parallax4 {
+		height: 360px;
+	}
+	
+	#parallax4 .vertical-text,
+	#parallax4 .pattern {
+		height: 360px;
+	}
+	
+	#parallax3, #parallax3 .pattern {
+		height: 380px;
+	}
+	
+	#parallax3 .embed-container {
+		margin-top: 40px;
+	}
+	
+	#slidecaption { 
+		font-size: 36px;
+		top: 35%;
+	}
+	
+	#slidecaption .sub-caption {
+		font-size: 20px;
+		padding: 0;
+	}
+	
+	.bg1, .bg4 {
+		background-size: 930px;
+		background-attachment: scroll;
+	}
+	
+	.bg2, .bg3 {
+		background-size: 910px;
+		background-attachment: scroll;
+	}
+	
+	.selectnav {
+		display: block;
+		width: 300px !important;
+		position: absolute;
+		right: 0;
+	}
+	
+	#mainnav .span8 {
+		position: relative;
+	}
+	
+	nav#mainnav .selectnav {
+		margin-top: 8px;
+	}
+	
+	.blog-post-title {
+		font-size: 28px;
+	}
+	
+	#parallax4 h2 {
+		display: none;
+	}
+	
+}
+
+
+/* --------- Mobile Phones --------- */
+@media (max-width: 767px) {
+
+	#adv .button-right .btn {
+		float: left;
+	}
+	
+	.lead {
+		font-size: 28px;
+		margin: 44px 0 46px 0;
+		padding-right: 0;
+	}
+	
+	.slider-services {
+		margin-bottom: 33px;
+	}
+	
+	
+	.profile {
+		margin-bottom: 30px;
+	}
+	
+	.laptop-slider {
+		height: auto;
+		background: none;
+		margin: 15px 0 59px 0;
+	}
+	
+	.display-slider {
+		height: auto;
+		background: none;
+		margin: 15px 0 60px 0;
+	}
+	
+	.laptop-slider .flexslider, .display-slider .flexslider {
+		width: 460px;
+		position: relative;
+		left: 50%;
+		margin-left: -230px;
+	}
+	
+	.project-intro {
+		padding: 0;
+	}
+	
+	.parallax-title {
+		font-size: 28px;
+		letter-spacing: 1px;
+	}
+	
+	#twitter-parallax .twitter-title {
+		font-size: 28px;
+	}
+	
+	#twitter-parallax .username {
+		font-size: 16px;
+	}
+	
+	#twitter-parallax .tweet {
+		font-size: 18px;
+	}
+	
+	#parallax3, #parallax3 .pattern {
+		height: 366px;
+	}
+	
+	#parallax3 .embed-container {
+		margin-top: 40px;
+	}
+	
+	.clients li img {
+		width: 100px;
+		height: auto;
+	}
+	
+	#parallax4 {
+		height: 360px;
+	}
+	
+	#parallax4 h2 {
+		display: none;
+	}
+	
+	#parallax4 .vertical-text,
+	#parallax4 .pattern {
+		height: 360px;
+	}
+	
+	.portfolio-slider {
+		margin-bottom: 44px;
+		margin-top: 33px;
+	}
+	
+	.option-set {
+		margin: 0;
+	}
+	
+	.option-set li {
+		font-size: 12px;
+		margin-right: 8px;
+	}
+	
+	.address {
+		margin-top: 30px;
+	}
+	
+	.lead-small {
+		font-size: 16px;
+		margin-top: 30px;
+	}
+	
+	.title {
+		font-size: 28px;
+		letter-spacing: 1px;
+	}
+	
+	.page {
+		padding-top: 65px;
+		padding-bottom: 50px;
+	}
+
+	#projects {
+		padding-top: 65px;
+	}
+	
+	.project-intro h3 {
+		font-size: 20px;
+	}
+	
+	#slidecaption { 
+		font-size: 28px;
+		top: 35%;
+		padding: 0 2%;
+	}
+	
+	#slidecaption .sub-caption {
+		font-size: 16px;
+		padding: 0;
+	}
+	
+	header, header .pattern, header .header-bg {
+		height: 560px;
+	}
+	
+	.wrapper {
+		top: 560px;
+	}
+	
+	.bg1, .bg2, .bg3, .bg4 {
+		background-size: 200%;
+	}
+	
+	.selectnav {
+		display: block;
+	}
+	
+	#topnav .selectnav {
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 73px;
+	}
+	
+	nav#mainnav .selectnav {
+		margin-top: 8px;
+		width: 460px;
+	}
+	
+	nav#mainnav .logo {
+		display: none;
+	}
+	
+	.bg1, .bg2, .bg3, .bg4 {
+		background-attachment: scroll;
+		background-size: 150%;
+	}
+	
+	.blog-post-title {
+		font-size: 24px;
+	}
+	
+	.blog-post {
+		padding-top: 80px;
+	}
+	
+	.blog-post p {
+		font-size: 14px;
+	}
+	
+	.blog-post hr {
+		margin-top: 70px;
+	}
+	
+	.fancybox-title {
+		display: none;
+	}
+	
+
+}
+
+
+/* --------- iPhone Vertical  --------- */
+@media (max-width: 479px) {
+
+	.laptop-slider .flexslider, .display-slider .flexslider {
+		width: 300px;
+		position: relative;
+		left: 50%;
+		margin-left: -150px;
+	}
+	
+	#slidecaption { 
+		font-size: 20px;
+		top: 36%;
+		padding:  2%;
+	}
+	
+	#slidecaption .sub-caption {
+		font-size: 14px;
+		padding: 0;
+	}
+	
+	#topnav .selectnav {
+		width: 300px;
+		top: 120px;
+	}
+	
+	nav#mainnav .selectnav {
+		width: 300px;
+	}
+	
+	header .logo {
+		text-align: center;
+	}
+	
+	body {
+		overflow-x: hidden;
+	}
+	
+	.bg1, .bg2, .bg3, .bg4 {
+		background-size: 220%;
+	}
+
+
+}

@@ -1,15 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="utf-8" />
+	
 	<title>Tandem</title>
-	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-	<%= csrf_meta_tags %>
-</head>
-<body>
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
-	<%= yield %>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="HandheldFriendly" content="true">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 
+	<%= stylesheet_link_tag "application", media: "all" %>
+	<%= javascript_include_tag "application" %>
+	
+	</head>
+
+	<body>
+		<%= yield %>
+		<!-- Start Sidebar -->
+		<section id="sidebar">
+			<div class="container">
+				<div class="row">
+					<div class="span4">
+						<h5>Vísitanos</h5>
+						
+						<strong>Teléfono:</strong> <span class="white-text">4440</span><br />
+						<strong>Dirección:</strong> <span class="white-text"></span></p>
+					</div>
+					<div class="span4">
+						
+					</div>
+					<div class="span4">
+						
+						<a clas="white-text"  target="_blank" style="color:white !important;">Privacidad de la Información</a> 
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Sidebar -->
+		
+		<section id="copyright">
+			© 2015 Desarrollado por Tandem. 
+		</section>
+
+
+	</div>
+	
 </body>
+
 </html>

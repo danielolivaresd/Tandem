@@ -1,0 +1,5 @@
+.add-comment label, #contact label { display: block; }
+
+header .header-bg { background: none; }
+
+.bg3 { background: url(../img/parallax/bg3.jpg) 50% 50% repeat-y fixed; }
