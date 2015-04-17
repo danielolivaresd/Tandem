@@ -116,7 +116,21 @@
 		-ms-interpolation-mode: bicubic;
 	}
 	
-
+	.timetable{
+		 border-collapse: collapse;
+	}
+	.timetable{
+		border: 1px solid #ccc;
+		text-align: center;
+	}
+	.timetable{
+		height: 60px;
+		width: 80px;
+		background-color: transparent;
+	}
+	.timetable:hover{
+		cursor: pointer;
+	}
 	.purple {
 		color: #1abc9c;
 	}
