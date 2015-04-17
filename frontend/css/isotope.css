@@ -1,0 +1,45 @@
+/* Posts
+------------------------------- */
+.post img.image { width: 100%; }
+
+#posts .span4 { padding-top: 20px; width: 300px; height: 291px; }
+
+.project-wrp img { height: 189px; }
+
+.isotope {
+	margin-top: 10px;
+}
+
+/* Isotope Transitions
+------------------------------- */
+.isotope, .isotope .item {-webkit-transition-duration: 0.8s;-moz-transition-duration:0.8s;-ms-transition-duration:0.8s;-o-transition-duration:0.8s;transition-duration:0.8s;}
+.isotope {-webkit-transition-property:height,width;-moz-transition-property: height,width;-ms-transition-property:height,width;-o-transition-property:height,width;transition-property:height,width;}
+.isotope .item {-webkit-transition-property: -webkit-transform,opacity;-moz-transition-property:-moz-transform,opacity;-ms-transition-property:-ms-transform,opacity;-o-transition-property:top,left,opacity;transition-property:transform, opacity;}
+
+@media (min-width: 1200px) {
+#posts .span4 { width: 270px; height: 271px; padding-top: 30px; }
+.project-wrp img { height: 170px; }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+#posts .span4 { width: 352px; height: 324px; }
+.project-wrp img { height: 222px; }
+}
+
+@media (max-width: 767px) {
+.isotope .item {position: static !important; -webkit-transform: translate(0px, 0px) !important; -moz-transform: translate(0px, 0px) !important; -ms-transform: translate(0px, 0px) !important;  transform: translate(0px, 0px) !important;}
+.isotope-hidden { display: none; }
+#posts .span4 { width: 100%; }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+#posts .span4 { width: 460px; height: 392px; margin-top: 20px; }
+.project-wrp img { height: 290px; }
+}
+
+@media (max-width: 479px) {
+#posts .span4 { width: 300px; height: 291px; margin-top: 20px; }
+.project-wrp img { height: 189px; }
+}
+
+
