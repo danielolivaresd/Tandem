@@ -1178,3 +1178,14 @@
 	.add-comment label {
 		display: none;
 	}
+
+
+.signup_form input{
+	width:700px !important;
+	text-align: left !important;
+}
+
+.signup_form input[type="submit"], .signup_form input[type="radio"],.signup_form label{
+	width:auto !important;
+	display: inline-block;
+}
