@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	
-	<title>Tandem - Únete</title>
+	<title>Tandem - Disponibilidad</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="HandheldFriendly" content="true">
@@ -21,11 +21,19 @@
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	
+	<script type="text/javascript">
+		function postToController() {
+        for (i = 0; i < document.getElementsByName('rating').length; i++) {
+                if(document.getElementsByName('rating')[i].checked == true) {
+                    var ratingValue = document.getElementsByName('rating')[i].value;
+                    break;
+                }
+        	}
+		}
+	</script>
 </head>
 
 <body>
-
 	<div class="wrapper2">
 	
 		<!-- Start Sticky Navigation -->
@@ -37,7 +45,7 @@
 					</div>
 					<div class="span8">
 						<ul id="fluid-nav" class="fluid-navigation visible-desktop">
-							<li><a href="index.html">Tandem</a></li>
+							<li ><a class="scroll-link" href="index.html">Tandem</a></li>
 							
 							<li class="current"><a>Únete</a></li>
 							<li><a class="scroll-link" href="login.html">Log In</a></li>
@@ -51,97 +59,47 @@
 		
 		<!-- Start About Page -->
 		<section  class="page page-gray center">
-			<div class="container">
+			<div class="container" align="center">
 				<div class="row">
-					<div class="span12 ">
-						<div class="title"> <span class="color-text">Únete</span> </div>
+					<div class="span12">
+						<div class="title"> <span class="color-text">Proporciona tú disponibilidad</span> </div>
 						<hr>
-						<div class="lead">Ya casi terminas.</div>
-						<br><br>
-					</div>
-
-					<div class="span4 left" >
-						
-						<img class="user" style="width:150px" src="img/user-default.jpg"><br> 
-						<br><br>
-						<p>Ilse Alejo</p>
-						<p>1234</p>
-						<p>ilse.alejo@gmail.com</p>
-						<p>nosoyilse</p>
-						<p>México</p>
-							
-						<br><br>	
-						<button  type="button" onclick="n('unete.html')">Edit Previous</button>
-							
-						</form>
-						
-					</div>
-
-					<div class="span8 left">
+						<!-- <div class="lead">Estas a unos pasos de ser parte de una red única.</div>
+						<br><br> -->
 						<form>
-							<table >
-								<tr>
-									<td style="width: 800px;"><h2>I speak this languages:</h2></td>
-									<td style="width: 800px;"><h2>I would like to learn this languages:</h2></td>
-								</tr>
-
-								<tr >
-									<td><table id="myTable">
+							<table border="0" cellpadding="1" cellspacing="1">
+								<tbody>
 									<tr>
-										<td  style="width: 500px;"><input type="text" placeholder="Language" style="width:200px !important;"><br>
-											<select>
-												<option value="n">Level</option>
-												<option value="beg">Beginner</option>
-												<option value="adv">Advanced</option>
-												<option value="mas">Master</option>
-											</select>
+										<td>
+											<img class="user" src="img/user-default.jpg">
+										</td>
+										<td>
+											<iframe src="//www.availabilitycalendar.com/embed/baGuK7rbBrO0mClrHi5N/es-0-0-1-1-0-0-0-0-0/" height="246" width="100%" frameborder="0" allowtransparency="true"></iframe>
 										</td>
 									</tr>
-									<tr>
-										<td><br><button type="button" onclick="add('myTable')" >Add Another</button></td>
-									</tr>
-									</table>
-									</td>
-									<td><table id="myTable2">
-									<tr>
-										<td  style="width: 500px;"><input type="text" placeholder="Language" style="width:200px !important;"><br>
-											<select>
-												<option value="n">Level</option>
-												<option value="beg">Beginner</option>
-												<option value="adv">Advanced</option>
-												<option value="mas">Master</option>
-											</select>
-										</td>
-									</tr>
-									<tr>
-										<td><br><button type="button" onclick="add('myTable2')" >Add Another</button></td>
-									</tr>
-									</table>
-									</td>
-								</tr>
-								
-									
+								</tbody>
 							</table>
-							<div class="span6 center">
-								<br><br>
-								<button type="button" onclick="n('unete3.html')" >Next</button>
-							</div>	
+							<br>						
+							<!-- <input type="file" name="pic" accept="image/*"> -->
+							<!-- <input type="text" placeholder="Name" style="width:700px !important;"><br>
+							<input type="text" placeholder="Phone" style="width:700px !important;"><br>
+							<input type="text" placeholder="Email" style="width:700px !important;"><br>
+							<input type="text" placeholder="Skype Id" style="width:700px !important;"><br>
+							<br><br>
+							<button  type="button" onclick="n('unete2.html')">Next</button> -->
+								
+							
+				            
+				            
+				            
+				            
 						</form>
 						
-						
-					
-						
-					
-
 					</div>
 				</div>
 			</div>
 		</section>
 		<!-- End About Page -->
-		
-		
-	
-		
 		
 		<!-- Start Sidebar -->
 		<section id="sidebar">
@@ -181,6 +139,7 @@
 	<script type="text/javascript" src="tandem.js"></script>
 	<script src="js/jquery.parallax-1.1.3.js"></script><!-- Parallax -->
 	
+	<script type="text/javascript" src="//www.availabilitycalendar.com/embed-js/baGuK7rbBrO0mClrHi5N/es-0-0-1-1-0-0-0-0-0/"></script>
 	
 	<script src="js/settings.js"></script> <!-- JS Options -->
 

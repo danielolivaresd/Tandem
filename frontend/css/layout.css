@@ -9,11 +9,11 @@
 
 @font-face {
 	font-family: 'Web Symbols';
-	src: url('assets/fonts/websymbolsligaregular.eot');
-	src: url('assets/fonts/websymbolsligaregular.eot?#iefix') format('embedded-opentype'),
-		url('assets/fonts/websymbolsligaregular.woff') format('woff'),
-		url('assets/fonts/websymbolsligaregular.ttf') format('truetype'),
-		url('assets/fonts/websymbolsligaregular.svg#websymbols') format('svg');
+	src: url('../fonts/websymbolsligaregular.eot');
+	src: url('../fonts/websymbolsligaregular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/websymbolsligaregular.woff') format('woff'),
+		url('../fonts/websymbolsligaregular.ttf') format('truetype'),
+		url('../fonts/websymbolsligaregular.svg#websymbols') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -116,7 +116,21 @@
 		-ms-interpolation-mode: bicubic;
 	}
 	
-
+	.timetable{
+		 border-collapse: collapse;
+	}
+	.timetable{
+		border: 1px solid #ccc;
+		text-align: center;
+	}
+	.timetable{
+		height: 60px;
+		width: 80px;
+		background-color: transparent;
+	}
+	.timetable:hover{
+		cursor: pointer;
+	}
 	.purple {
 		color: #1abc9c;
 	}
