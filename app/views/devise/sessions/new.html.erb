@@ -1,26 +1,59 @@
-<h2>Log in</h2>
+<div class="wrapper2">
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+    <!-- Start Sticky Navigation -->
+    <nav id="mainnav">
+        <div class="container">
+            <div class="row">
+                <div class="span4">
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+                </div>
+                <div class="span8">
+                    <ul id="fluid-nav" class="fluid-navigation visible-desktop">
+                        <li ><a class="scroll-link" href="index.html">Tandem</a></li>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
+                        <li class="scroll-link"><a>Únete</a></li>
+                        <li><a class="current" href="login.html">Log In</a></li>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End Sticky Navigation -->
+
+    <!-- Start About Page -->
+    <section  class="page page-gray center">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="title"> <span class="color-text">Login</span> </div>
+                    <hr>
+                    <br><br>
+                    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                      <div class="field">
+                        <%= f.email_field :email, autofocus: true, :placeholder => "Email" %>
+                      </div>
+
+                      <div class="field">
+                        <%= f.password_field :password, autocomplete: "off", :placeholder => "Password" %>
+                      </div>
+
+                      <% if devise_mapping.rememberable? -%>
+                        <div class="field">
+                          <%= f.check_box :remember_me %>
+                          <%= f.label :remember_me %>
+                        </div>
+                      <% end -%>
+
+                      <div class="actions">
+                        <%= f.submit "Log in" %>
+                      </div>
+                    <% end %>
+
+
+					</div>
+				</div>
+			</div>
+		</section>
 
 <%= render "devise/shared/links" %>
