@@ -9,10 +9,10 @@
                 </div>
                 <div class="span8">
                     <ul id="fluid-nav" class="fluid-navigation visible-desktop">
-                        <li ><a class="scroll-link" href="index.html">Tandem</a></li>
+                        <li><%= link_to "Tandem", root_path, class:"scroll-link" %></li>
 
-                        <li class="scroll-link"><a>Únete</a></li>
-                        <li><a class="current" href="login.html">Log In</a></li>
+                        <li><%= link_to "únete", new_user_registration_path, class:"scroll-link" %></li>
+                        <li class="current"><a>Log In</a></li>
 
                     </ul>
                 </div>

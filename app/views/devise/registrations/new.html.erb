@@ -7,10 +7,10 @@
       </div>
       <div class="span8">
         <ul id="fluid-nav" class="fluid-navigation visible-desktop">
-          <li ><a class="scroll-link" href="index.html">Tandem</a></li>
+          <li ><%= link_to "Tandem", root_path, class:"scroll-link" %></li>
 
           <li class="current"><a>Únete</a></li>
-          <li><a class="scroll-link" href="login.html">Log In</a></li>
+          <li><%= link_to "Log In", new_user_session_path, class:"scroll-link" %></li>
 
         </ul>
       </div>
