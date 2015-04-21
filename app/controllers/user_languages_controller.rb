@@ -31,7 +31,7 @@ class UserLanguagesController < ApplicationController
 
     respond_to do |format|
       if @user_language.save
-        format.html { redirect_to user_languages_path, notice: 'User language was successfully created.' }
+        format.html { redirect_to new_language_interest_path, notice: 'User language was successfully created.' }
         format.json { render :show, status: :created, location: @user_language }
       else
         format.html { render :new }
