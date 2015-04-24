@@ -51,7 +51,7 @@ class MatchesController < ApplicationController
       )
     respond_to do |format|
       if @match.save && @match_language1.save && @match_language2.save && @match_user1.save && @match_user2.save
-        format.html { redirect_to @match, notice: 'Match was successfully created.' }
+        format.html { redirect_to "/profile", notice: 'Match was successfully created.' }
         format.json { render :show, status: :created, location: @match }
       else
         format.html { render :new }

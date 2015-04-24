@@ -3,26 +3,28 @@ User.create!([
 	{
 		email:"a@a.com",
 		password: "password",
-		first_name: "A",
-		last_name: "Nice Guy",
+		first_name: "Javier",
+		last_name: "Martínez",
 		date_of_birth: 10.years.from_now,
 		country: "Mexico",
 		state: "San Luis Potosi",
 		city: "San Luis Potosi",
 		sex: "Male",
-		avatar: URI.parse("http://www.stealthmediagroup.co.uk/wp-content/uploads/2014/05/IMG_3473.jpg")
+		avatar: URI.parse("http://www.stealthmediagroup.co.uk/wp-content/uploads/2014/05/IMG_3473.jpg"),
+		skype_username: "a@a"
 	},
 	{
 		email:"b@a.com",
 		password: "password",
-		first_name: "A",
-		last_name: "Nice Guy",
+		first_name: "Chris",
+		last_name: "Tucker",
 		date_of_birth: 10.years.from_now,
-		country: "Mexico",
+		country: "USA",
 		state: "San Luis Potosi",
 		city: "San Luis Potosi",
 		sex: "Male",
-		avatar: URI.parse("http://www.topdrawersoccer.com/the91stminute/wp-content/uploads/2012/08/Random-guy.jpg")
+		avatar: URI.parse("http://www.topdrawersoccer.com/the91stminute/wp-content/uploads/2012/08/Random-guy.jpg"),
+		skype_username: "b@a"
 	}
 ])
 
