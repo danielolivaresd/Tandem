@@ -10,7 +10,7 @@ User.create!([
 		state: "San Luis Potosi",
 		city: "San Luis Potosi",
 		sex: "Male",
-		avatar: File.new("#{Rails.root}/app/assets/images/daniel.png")
+		avatar: URI.parse("http://www.stealthmediagroup.co.uk/wp-content/uploads/2014/05/IMG_3473.jpg")
 	},
 	{
 		email:"b@a.com",
@@ -22,7 +22,7 @@ User.create!([
 		state: "San Luis Potosi",
 		city: "San Luis Potosi",
 		sex: "Male",
-		avatar: File.new("#{Rails.root}/app/assets/images/daniel.png")
+		avatar: URI.parse("http://www.topdrawersoccer.com/the91stminute/wp-content/uploads/2012/08/Random-guy.jpg")
 	}
 ])
 
@@ -63,8 +63,8 @@ UserLanguage.create!([
 	{
 		user: User.last,
 		language: spanish,
-		level: 10,
-		is_native: true
+		level: 9,
+		is_native: false
 	},
 	{
 		user: User.last,
