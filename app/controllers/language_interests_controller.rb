@@ -31,7 +31,7 @@ class LanguageInterestsController < ApplicationController
 
     respond_to do |format|
       if @language_interest.save
-        format.html { redirect_to language_interests_path, notice: 'Language interest was successfully created.' }
+        format.html { redirect_to new_match_path, notice: 'Language interest was successfully created.' }
         format.json { render :show, status: :created, location: @language_interest }
       else
         format.html { render :new }
