@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_attached_file :avatar, styles: { thumb: "100x100#", medium: "400x400#" }
+  has_attached_file :avatar, styles: { thumb: "100x100#", medium: "400x400#" }, :default_url => "/img/user-default.jpg"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   has_many :user_languages
   has_many :languages, through: :user_languages

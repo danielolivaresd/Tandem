@@ -1,5 +1,108 @@
-<h1>New User Language</h1>
+<!-- Start Sticky Navigation -->
+<nav id="mainnav">
+	<div class="container">
+		<div class="row">
+			<div class="span4">
+				
+			</div>
+			<div class="span8">
+				<ul id="fluid-nav" class="fluid-navigation visible-desktop">
+					<li><%= link_to "Tandem", root_path %></li>
+					
+					<li class="current"><a>Únete</a></li>
+					<li><%=link_to "Log In", new_user_session_path, class:"scroll-link" %></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<!-- End Sticky Navigation -->
 
-<%= render 'form' %>
+<!-- Start About Page -->
+<section  class="page page-gray center">
+	<div class="container">
+		<div class="row">
+			<div class="span12 ">
+				<div class="title"> <span class="color-text">Únete</span> </div>
+				<hr>
+				<div class="lead">Ya casi terminas.</div>
+				<br><br>
+			</div>
 
-<%= link_to 'Back', user_languages_path %>
+			<div class="span4 left" >
+				
+				<img class="user" style="width:150px" src="<%= @user.avatar.url %>"><br> 
+				<br><br>
+				<p><%= "#{@user.first_name} #{@user.last_name}" %></p>
+				<p><%= @user.email %></p>
+				<p>Skype: <%= @user.skype_username %></p>
+				<p><%= @user.country %></p>
+				
+				<br><br>	
+				<!-- <button  type="button" onclick="n('unete.html')">Edit Previous</button> -->
+				
+			<!-- </form> -->
+			
+		</div>
+
+		<div class="span8 left">
+			<!-- <form> -->
+				<table >
+					<tr>
+						<td style="width: 800px;"><h2>I speak this language:</h2></td>
+						<!-- <td style="width: 800px;"><h2>I would like to learn this languages:</h2></td> -->
+					</tr>
+
+					<tr >
+									<td><!-- <table id="myTable">
+									<tr>
+										<td  style="width: 500px;"><input type="text" placeholder="Language" style="width:200px !important;"><br>
+											<select>
+												<option value="n">Level</option>
+												<option value="beg">Beginner</option>
+												<option value="adv">Advanced</option>
+												<option value="mas">Master</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td><br><button type="button" onclick="add('myTable')" >Add Another</button></td>
+									</tr>
+								</table> -->
+								<%= render 'form' %>
+							</td>
+									<!-- <td><table id="myTable2">
+									<tr>
+										<td  style="width: 500px;"><input type="text" placeholder="Language" style="width:200px !important;"><br>
+											<select>
+												<option value="n">Level</option>
+												<option value="beg">Beginner</option>
+												<option value="adv">Advanced</option>
+												<option value="mas">Master</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td><br><button type="button" onclick="add('myTable2')" >Add Another</button></td>
+									</tr>
+									</table>
+								</td> -->
+							</tr>
+							
+							
+						</table>
+						
+					<!-- </form> -->
+					
+					
+					
+					
+					
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End About Page -->
+	
