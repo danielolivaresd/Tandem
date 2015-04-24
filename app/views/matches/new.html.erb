@@ -33,7 +33,7 @@
 
       <div class="span4 left" >
 
-        <img class="user" style="width:150px" src="<%= @user.avatar.url %>"><br> 
+        <img class="user" style="width:150px" src="<%= @user.avatar.url(:medium) %>"><br> 
         <br><br>
         <p><%= "#{@user.first_name} #{@user.last_name}" %></p>
         <p><%= @user.email %></p>
@@ -50,7 +50,7 @@
       <% @possible_matches.each do |match| %>
       <div class="match">
         <br><br>
-        <img <img class="user" style="width:150px" src="<%= match[:other_user_language].user.avatar.url %>"> <br><br>
+        <img <img class="user" style="width:150px" src="<%= match[:other_user_language].user.avatar.url(:medium) %>"> <br><br>
         <%= "#{match[:other_user_language].user.first_name} #{match[:other_user_language].user.last_name} from #{match[:other_user_language].user.country} knows #{match[:other_user_language].language.name} (#{match[:other_user_language].level}/10) and wants to learn #{match[:user_language].language.name}" %>
         <br><br>
         <%= link_to "Select" do %>

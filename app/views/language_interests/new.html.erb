@@ -32,7 +32,7 @@
 
 			<div class="span4 left" >
 
-				<img class="user" style="width:150px" src="<%= @user.avatar.url %>"><br> 
+				<img class="user" style="width:150px" src="<%= @user.avatar.url(:medium) %>"><br> 
 				<br><br>
 				<p><%= "#{@user.first_name} #{@user.last_name}" %></p>
 				<p><%= @user.email %></p>
