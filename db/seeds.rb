@@ -88,7 +88,12 @@ LanguageInterest.create!([
 	},
 ])
 
+Match.destroy_all
+
 p "#{User.all.count} users created."
 p "#{Language.all.count} languages created."
 p "#{UserLanguage.all.count} user languages created."
 p "#{LanguageInterest.all.count} language interests created."
+p "#{Match.all.count} Matches found"
+p "#{MatchUser.all.count} Match Users found"
+p "#{MatchLanguage.all.count} Match Languages found"

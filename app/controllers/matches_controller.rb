@@ -28,10 +28,29 @@ class MatchesController < ApplicationController
   # POST /matches
   # POST /matches.json
   def create
-    @match = Match.new(match_params)
-
+    @match = Match.new()
+    @match_language1 = MatchLanguage.create!(
+      match: @match,
+      language_id: params[:match][:teacher_language].to_i,
+      teacher_id: params[:match][:user].to_i,
+      student_id: params[:match][:other_user].to_i
+      )
+    @match_language2 = MatchLanguage.create!(
+      match: @match,
+      language_id: params[:match][:student_language].to_i,
+      teacher_id: params[:match][:other_user].to_i,
+      student_id: params[:match][:user].to_i
+      )
+    @match_user1 = MatchUser.create!(
+      match: @match,
+      user_id: params[:match][:user].to_i
+      )
+    @match_user2 = MatchUser.create!(
+      match: @match,
+      user_id: params[:match][:other_user].to_i
+      )
     respond_to do |format|
-      if @match.save
+      if @match.save && @match_language1.save && @match_language2.save && @match_user1.save && @match_user2.save
         format.html { redirect_to @match, notice: 'Match was successfully created.' }
         format.json { render :show, status: :created, location: @match }
       else
@@ -73,7 +92,7 @@ class MatchesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def match_params
-      params.require(:match).permit(:from, :to)
+      params.require(:match).permit(:from, :to, :other_user, :teacher_language, :student_language)
     end
 
     def set_user
@@ -83,4 +102,4 @@ class MatchesController < ApplicationController
     def set_all_languages
       @all_languages = Language.all
     end
-end
+  end

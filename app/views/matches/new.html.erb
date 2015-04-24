@@ -53,9 +53,28 @@
         <img <img class="user" style="width:150px" src="<%= match[:other_user_language].user.avatar.url(:medium) %>"> <br><br>
         <%= "#{match[:other_user_language].user.first_name} #{match[:other_user_language].user.last_name} from #{match[:other_user_language].user.country} knows #{match[:other_user_language].language.name} (#{match[:other_user_language].level}/10) and wants to learn #{match[:user_language].language.name}" %>
         <br><br>
-        <%= link_to "Select" do %>
-          <button>Select</button>
+        <%= form_for(@match) do |f| %>
+        <% if @match.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@match.errors.count, "error") %> prohibited this match from being saved:</h2>
+
+          <ul>
+            <% @match.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
         <% end %>
+
+        <%= f.hidden_field :user, :value => current_user.id %>
+        <%= f.hidden_field :other_user, :value => match[:other_user_language].user_id %>
+        <%= f.hidden_field :teacher_language, :value => match[:user_language].language_id %>
+        <%= f.hidden_field :student_language, :value => match[:other_user_language].language_id %>
+        <div class="actions">
+          <%= f.submit "Select"%>
+        </div>
+        <% end %>
+
       </div>
       <% end %>
 
