@@ -13,7 +13,10 @@ class Match < ActiveRecord::Base
 			possible_user_language_interests = possible_user.language_interests
 			uls_for_pu = UserLanguage.for_language_interests possible_user_language_interests
 			uls_for_pu.each do |ulpu|
-				result.append ul if ulpu.user == user
+				if ulpu.user == user
+					thehash = {:other_user_language => ul, :user_language => ulpu}
+					result.append thehash
+				end
 			end
 		end
 		result

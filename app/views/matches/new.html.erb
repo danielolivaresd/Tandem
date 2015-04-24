@@ -50,8 +50,8 @@
       <% @possible_matches.each do |match| %>
       <div class="match">
         <br><br>
-        <img <img class="user" style="width:150px" src="<%= match.user.avatar.url %>"> <br><br>
-        <%= "#{match.user.first_name} #{match.user.last_name} from #{match.user.country} knows #{match.language.name} (Level: #{match.level}/10)" %>
+        <img <img class="user" style="width:150px" src="<%= match[:other_user_language].user.avatar.url %>"> <br><br>
+        <%= "#{match[:other_user_language].user.first_name} #{match[:other_user_language].user.last_name} from #{match[:other_user_language].user.country} knows #{match[:other_user_language].language.name} (#{match[:other_user_language].level}/10) and wants to learn #{match[:user_language].language.name}" %><br>
         <br><br>
         <%= link_to "Select" do %>
           <button>Select</button>
