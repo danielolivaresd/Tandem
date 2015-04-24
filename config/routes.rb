@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   scope "/profile" do
     resources :user_languages, path: "languages"
     resources :language_interests, path: "interests"
+    resources :matches
   end
   root 'static#index'
 end
