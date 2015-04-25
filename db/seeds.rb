@@ -3,26 +3,28 @@ User.create!([
 	{
 		email:"a@a.com",
 		password: "password",
-		first_name: "A",
-		last_name: "Nice Guy",
+		first_name: "Javier",
+		last_name: "Martínez",
 		date_of_birth: 10.years.from_now,
 		country: "Mexico",
 		state: "San Luis Potosi",
 		city: "San Luis Potosi",
 		sex: "Male",
-		avatar: File.new("#{Rails.root}/app/assets/images/daniel.png")
+		avatar: URI.parse("http://www.stealthmediagroup.co.uk/wp-content/uploads/2014/05/IMG_3473.jpg"),
+		skype_username: "a@a"
 	},
 	{
 		email:"b@a.com",
 		password: "password",
-		first_name: "A",
-		last_name: "Nice Guy",
+		first_name: "Chris",
+		last_name: "Tucker",
 		date_of_birth: 10.years.from_now,
-		country: "Mexico",
+		country: "USA",
 		state: "San Luis Potosi",
 		city: "San Luis Potosi",
 		sex: "Male",
-		avatar: File.new("#{Rails.root}/app/assets/images/daniel.png")
+		avatar: URI.parse("http://www.topdrawersoccer.com/the91stminute/wp-content/uploads/2012/08/Random-guy.jpg"),
+		skype_username: "b@a"
 	}
 ])
 
@@ -63,8 +65,8 @@ UserLanguage.create!([
 	{
 		user: User.last,
 		language: spanish,
-		level: 10,
-		is_native: true
+		level: 9,
+		is_native: false
 	},
 	{
 		user: User.last,
@@ -88,7 +90,12 @@ LanguageInterest.create!([
 	},
 ])
 
+Match.destroy_all
+
 p "#{User.all.count} users created."
 p "#{Language.all.count} languages created."
 p "#{UserLanguage.all.count} user languages created."
 p "#{LanguageInterest.all.count} language interests created."
+p "#{Match.all.count} Matches found"
+p "#{MatchUser.all.count} Match Users found"
+p "#{MatchLanguage.all.count} Match Languages found"
