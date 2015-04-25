@@ -7,14 +7,17 @@
 			</div>
 			<div class="span8">
 				<ul id="fluid-nav" class="fluid-navigation visible-desktop">
-					<li><a href="index.html">Tandem</a></li>
+					<li><a href="static#index">Tandem</a></li>
 
-					<li ><a href="unete.html">Únete</a></li>
+					<!-- <li ><a href="unete.html">Únete</a></li> -->
 					<li class="current"><a class="scroll-link " >Profile</a></li>
 					<% if user_signed_in? %>
-					  <li>
-						  <%= link_to('Logout', destroy_user_session_path) %>
-					  </li>
+						<li>
+							<%= link_to('Find Matches', new_match_path) %>
+						</li>
+						<li>
+							<%= link_to('Logout', destroy_user_session_path) %>
+						</li>
 					<% end %>
 				</ul>
 			</div>
