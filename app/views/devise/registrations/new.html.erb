@@ -9,7 +9,7 @@
         <ul id="fluid-nav" class="fluid-navigation visible-desktop">
           <li><%= link_to "Tandem", root_path, class:"scroll-link" %></li>
 
-          <li class="current"><a>Únete</a></li>
+          <li class="current"><a>Join Now</a></li>
           <li><%= link_to "Log In", new_user_session_path, class:"scroll-link" %></li>
 
         </ul>
@@ -24,9 +24,9 @@
   <div class="container signup_form">
     <div class="row">
       <div class="span12">
-        <div class="title"> <span class="color-text">Únete</span> </div>
+        <div class="title"> <span class="color-text">Join</span> </div>
         <hr>
-        <div class="lead">Estas a unos pasos de ser parte de una red única.</div>
+        <div class="lead">You are steps away of joing a unique network.</div>
         <br><br>
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <img class="user" src="<%= image_path "user-default.jpg" %>"><br> 

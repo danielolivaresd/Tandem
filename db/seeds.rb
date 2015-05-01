@@ -10,7 +10,7 @@ User.create!([
 		state: "San Luis Potosi",
 		city: "San Luis Potosi",
 		sex: "Male",
-		avatar: File.new("#{Rails.root}/app/assets/images/daniel.png")
+		#avatar: File.new("#{Rails.root}/app/assets/images/daniel.png")
 	},
 	{
 		email:"b@a.com",
@@ -22,12 +22,15 @@ User.create!([
 		state: "San Luis Potosi",
 		city: "San Luis Potosi",
 		sex: "Male",
-		avatar: File.new("#{Rails.root}/app/assets/images/daniel.png")
+		#avatar: File.new("#{Rails.root}/app/assets/images/daniel.png")
 	}
 ])
 
 Language.destroy_all
 Language.create!([
+	{
+		name:"Mandarin"
+	},
 	{
 		name:"English"
 	},
@@ -35,11 +38,87 @@ Language.create!([
 		name:"Spanish"
 	},
 	{
+		name:"Arabic"
+	},
+	{
+		name:"Bengali"
+	},
+	{
+		name:"Hindi"
+	},
+	{
+		name:"Russian"
+	},
+	{
+		name:"Portuguese"
+	},
+	{
+		name:"Japanese"
+	},
+	{
 		name:"German"
 	},
 	{
+		name:"Chinese"
+	},
+	{
+		name:"Javanese"
+	},
+	{
+		name:"Korean"
+	},
+	{
 		name:"French"
+	},
+	{
+		name:"Turkish"
+	},
+	{
+		name:"Vietnamese"
+	},
+	{
+		name:"Telugu"
+	},
+	{
+		name:"Marathi"
+	},
+	{
+		name:"Tamil"
+	},
+	{
+		name:"Italian"
+	},
+	{
+		name:"Urdu"
+	},
+	{
+		name:"Polish"
+	},
+	{
+		name:"Thai"
+	},
+	{
+		name:"Ukrainian"
+	},
+	{
+		name:"Persian"
+	},
+	{
+		name:"Malayam"
+	},
+	{
+		name:"Kannada"
+	},
+	{
+		name:"Oriya"
+	},
+	{
+		name:"Romanian"
+	},
+	{
+		name:"Finnish"
 	}
+
 ])
 english = Language.find_by(name:"English")
 spanish = Language.find_by(name:"Spanish")
