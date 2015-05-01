@@ -9,7 +9,7 @@
 				<ul id="fluid-nav" class="fluid-navigation visible-desktop">
 					<li><%= link_to "Tandem", root_path %></li>
 
-					<li class="current"><a>Únete</a></li>
+					<li class="current"><a>Join Now</a></li>
 					<li><%=link_to "Log In", new_user_session_path, class:"scroll-link" %></li>
 
 				</ul>
@@ -24,9 +24,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="span12 ">
-				<div class="title"> <span class="color-text">Únete</span> </div>
+				<div class="title"> <span class="color-text">Join</span> </div>
 				<hr>
-				<div class="lead">Ya casi terminas.</div>
+				<div class="lead">Almost Done!</div>
 				<br><br>
 			</div>
 
@@ -38,6 +38,7 @@
 				<p><%= @user.email %></p>
 				<p>Skype: <%= @user.skype_username %></p>
 				<p><%= @user.country %></p>
+				<%= link_to "Edit Data", edit_user_registration_path(@user) %>
 				<br><br>	
 			</div>
 
