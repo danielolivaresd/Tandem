@@ -48,6 +48,7 @@
     <div class="span6 center">
 
       <% @possible_matches.each do |match| %>
+      <% if !Match.match_exists? match[:other_user_language].language, match[:other_user_language].user, current_user #Only if the user doesn't already have a match with the other user %>
       <div class="match">
         <br><br>
         <img class="user" style="width:150px" src="<%= match[:other_user_language].user.avatar.url(:medium) %>"> <br><br>
@@ -76,6 +77,7 @@
         <% end %>
 
       </div>
+      <% end %>
       <% end %>
 
     </div>
