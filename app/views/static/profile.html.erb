@@ -62,12 +62,13 @@
 				<div class="span2 gray center">
 					    <img class="user" style="width:150px" src="<%= matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.avatar.url(:medium) %>"> <br><br>
 					I am <strong>learning <%= matchuser.match.match_languages.where(match: matchuser.match, student: @user).first.language.name %></strong> from <strong><%= "#{matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.first_name} #{matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.last_name} " %></strong> (<%= matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.country %>) and <strong> teaching <%= matchuser.match.match_languages.where(match: matchuser.match, teacher: @user).first.language.name %></strong> <br>
+					<% if matchuser.match.match_languages.first.confirmed %>
 					<strong>Skype:</strong> <%= matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.skype_username %><br>
+					<% else %>
+						Skype: The other user hasn't confirmed the match yet!
+					<% end %>
 				</div>
 				
-				<% if @user == matchuser.match.match_languages.where(match: matchuser.match, teacher: @user %>
-				lalala
-				<% end %>
 				<% end %>
 			</div>
 		</div>
