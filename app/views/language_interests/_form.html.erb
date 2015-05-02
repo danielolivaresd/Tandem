@@ -12,12 +12,12 @@
 <% end %>
 
 <div class="field">
-  <%= f.label "Idioma" %>
+  <%= f.label "Language" %>
   <%= f.select :language_id, @all_languages.map {|language| [language.name, language.id]} %>
 </div>
 
 <div class="field">
-  <%= f.label "Nivel acual" %>
+  <%= f.label "Level" %>
   <%= f.select :actual_level, ((0..10).map {|i| [ case i
     when 0
       "Basic"
@@ -31,6 +31,6 @@
 </div>
 
 <div class="actions">
-  <%= f.submit "Busca coincidencias!" %>
+  <%= f.submit "Find Matches!" %>
 </div>
 <% end %>
