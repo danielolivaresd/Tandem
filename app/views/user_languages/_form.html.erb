@@ -21,11 +21,11 @@
     <%= f.label "Level" %>
     <%= f.select :level, ((0..10).map {|i| [ case i
     when 0
-      "Basic"
+      "0 (Basic)"
     when 5
-      "Intermediate"
+      "5 (Intermediate)"
     when 10
-      "Advanced" 
+      "10 (Advanced)" 
     else
       i
     end ,i] }) %>
