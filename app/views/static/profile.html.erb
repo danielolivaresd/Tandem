@@ -10,13 +10,13 @@
 					<!-- <li class="current"><a>Tandem</a></li> -->
 
 					<!-- <li ><a href="unete.html">Únete</a></li> -->
-					<li class="current"><a class="scroll-link " >Profile</a></li>
+					<li class="current"><a class="scroll-link " >Perfil</a></li>
 					<% if user_signed_in? %>
 						<li>
-							<%= link_to('Find Matches', new_match_path) %>
+							<%= link_to('Buscar coincidencias', new_match_path) %>
 						</li>
 						<li>
-							<%= link_to('Logout', destroy_user_session_path) %>
+							<%= link_to('Salir', destroy_user_session_path) %>
 						</li>
 					<% end %>
 				</ul>
@@ -31,9 +31,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="span12 ">
-				<div class="title"> <span class="color-text">Profile</span> </div>
+				<div class="title"> <span class="color-text">Perfil</span> </div>
 				<hr>
-				<div class="lead"><%= "I have done #{pluralize(@matches.count, 'match')}!" %></div>
+				<div class="lead"><%= "Tengo #{@matches.count} coincidencias!" %></div>
 				<br><br>
 			</div>
 
@@ -46,20 +46,19 @@
 				<p>Skype: <%= @user.skype_username %></p>
 				<p><%= @user.country %></p>
 				<br><br>
-
-			</form>
-
+              <!--<%= link_to('Idiomas', ) %>-->
 		</div>
+
 
 		<div class="span8 center">
 
 			<div class="learn">
 				<br><br>
-				<div class="lead-small left">These are my matches:</div>
+				<div class="lead-small left">Coincidencias:</div>
 				<br><br><br><br><br><br>
 				<% @matches.each do |matchuser| %>
 				<div class="span2 gray center">
-					<img <img class="user" style="width:150px" src="<%= matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.avatar.url(:medium) %>"> <br><br>
+					    <img class="user" style="width:150px" src="<%= matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.avatar.url(:medium) %>"> <br><br>
 					I am <strong>learning <%= matchuser.match.match_languages.where(match: matchuser.match, student: @user).first.language.name %></strong> from <strong><%= "#{matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.first_name} #{matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.last_name} " %></strong> (<%= matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.country %>) and <strong> teaching <%= matchuser.match.match_languages.where(match: matchuser.match, teacher: @user).first.language.name %></strong> <br>
 					<strong>Skype:</strong> <%= matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.skype_username %><br>
 				</div>
@@ -76,4 +75,3 @@
 </div>
 </div>
 </section>
-		<!-- End About Page -->
