@@ -1,4 +1,30 @@
-<h1>Listing User Languages</h1>
+<!-- Start Sticky Navigation -->
+<nav id="mainnav">
+  <div class="container">
+    <div class="row">
+      <div class="span4">
+
+      </div>
+      <div class="span8">
+        <ul id="fluid-nav" class="fluid-navigation visible-desktop">
+          <li><%= link_to "Tandem", root_path %></li>
+
+          <li class="current"><a>Join Now</a></li>
+          <li><%=link_to "Log In", new_user_session_path, class:"scroll-link" %></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- End Sticky Navigation -->
+<br><br><br>
+
+<br><br><br>
+<div class="container">
+    <div class="row">
+      <div class="span12 ">
+        <div class="title"><h1>Listing User Languages</h1></div>
 
 <table>
   <thead>
@@ -25,3 +51,8 @@
 <br>
 
 <%= link_to 'New User language', new_user_language_path %>
+<br><br><br>
+<br><br><br>
+</div>
+</div>
+</div>

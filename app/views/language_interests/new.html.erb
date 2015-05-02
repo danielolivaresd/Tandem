@@ -9,7 +9,7 @@
 				<ul id="fluid-nav" class="fluid-navigation visible-desktop">
 					<li><%= link_to "Tandem", root_path %></li>
 
-					<li class="current"><a>Únete</a></li>
+					<li class="current"><a>Join Now</a></li>
 					<li><%=link_to "Log In", new_user_session_path, class:"scroll-link" %></li>
 
 				</ul>
@@ -26,7 +26,7 @@
 			<div class="span12 ">
 				<div class="title"> <span class="color-text">Únete</span> </div>
 				<hr>
-				<div class="lead">Ya casi terminas.</div>
+				<div class="lead">Almost Done!</div>
 				<br><br>
 			</div>
 
@@ -38,13 +38,14 @@
 				<p><%= @user.email %></p>
 				<p>Skype: <%= @user.skype_username %></p>
 				<p><%= @user.country %></p>
+				<%= link_to "Back", edit_user_language_path(@user) %>
 				<br><br>	
 			</div>
 
 			<div class="span8 left">
 				<table >
 					<tr>
-						<td style="width: 800px;"><h2>I would like to learn this language:</h2></td>
+						<td style="width: 800px;"><h2>Me gustaria aprender el siguiente idioma:</h2></td>
 					</tr>
 
 					<tr >

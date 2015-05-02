@@ -19,15 +19,24 @@
 
   <div class="field">
     <%= f.label "Level" %>
-    <%= f.select :level, ((0..10).map {|i| [i,i] }) %>
+    <%= f.select :level, ((0..10).map {|i| [ case i
+    when 0
+      "Basic"
+    when 5
+      "Intermediate"
+    when 10
+      "Advanced" 
+    else
+      i
+    end ,i] }) %>
   </div>
 
   <div class="field">
     <%= f.check_box :is_native %>
-    <%= f.label "Is this tongue native?" %>
+    <%= f.label "Lengua nativa?" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Next" %>
+    <%= f.submit "Siguiente" %>
   </div>
 <% end %>
