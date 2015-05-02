@@ -29,7 +29,7 @@ class MatchesController < ApplicationController
   # POST /matches
   # POST /matches.json
   def create
-    @match = Match.new()
+    @match = Match.new(requested_by: params[:match][:user].to_i, confirmed: false)
     @match_language1 = MatchLanguage.create!(
       match: @match,
       language_id: params[:match][:teacher_language].to_i,
@@ -82,6 +82,15 @@ class MatchesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to matches_url, notice: 'Match was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def confirm
+    match = Match.find(params[:id])
+    match.confirmed = true
+
+    if match.save
+      redirect_to "/profile"
     end
   end
 
