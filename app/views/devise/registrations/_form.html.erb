@@ -15,7 +15,8 @@
   <% end %>
 
 
-<img class="user" src="<%= image_path "user-default.jpg" %>"><br>
+<!--<img class="user" src="<%= image_path "user-default.jpg" %>"><br>-->
+<%= image_tag current_user ? current_user.avatar.url(:medium) :  "user-default.jpg", class: "user" %><br>
 <div class="field">
   <%= f.file_field :avatar, :accept => "image/*" %>
 </div>
