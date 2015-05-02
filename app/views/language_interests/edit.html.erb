@@ -1,6 +1,73 @@
-<h1>Editing Language Interest</h1>
 
-<%= render 'form' %>
+<!-- Start Sticky Navigation -->
+<nav id="mainnav">
+	<div class="container">
+		<div class="row">
+			<div class="span4">
 
-<%= link_to 'Show', @language_interest %> |
-<%= link_to 'Back', language_interests_path %>
+			</div>
+			<div class="span8">
+				<ul id="fluid-nav" class="fluid-navigation visible-desktop">
+					<li><%= link_to "Profile", root_path %></li>
+
+		            <% if user_signed_in? %>
+		                <li>
+		                    <%= link_to('Find matches', new_match_path) %>
+		                </li>
+		                <li>
+		                    <%= link_to('Log out', destroy_user_session_path) %>
+		                </li>
+		            <% end %>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<!-- End Sticky Navigation -->
+
+<!-- Start About Page -->
+<section  class="page page-gray center">
+	<div class="container">
+		<div class="row">
+			<div class="span12 ">
+				<div class="title"> <span class="color-text">I want to learn:</span> </div>
+				<hr>
+				<br><br>
+			</div>
+
+			<div class="span4 left" >
+
+				<img class="user" style="width:150px" src="<%= @user.avatar.url(:medium) %>"><br>
+				<br><br>
+				<p><%= "#{@user.first_name} #{@user.last_name}" %></p>
+				<p><%= @user.email %></p>
+				<p>Skype: <%= @user.skype_username %></p>
+				<p><%= @user.country %></p>
+				<p><%= link_to('Edit Pofile', edit_user_registration_path) %><p>
+				<p><%= link_to('My languages', user_languages_path) %><p>
+
+			</div>
+
+			<div class="span8 left">
+				<table >
+					<tr>
+						<td style="width: 800px;"><h3>I speak this language:</h3></td>
+					</tr>
+
+					<br><br>
+					<tr >
+						<td>
+							<%= render 'form' %>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End About Page
+
+
+<%= link_to 'Show', @user_language %> |
+<%= link_to 'Back', user_languages_path %>-->

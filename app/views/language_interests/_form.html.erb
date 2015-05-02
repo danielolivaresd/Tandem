@@ -1,3 +1,4 @@
+
 <%= form_for(@language_interest) do |f| %>
 <% if @language_interest.errors.any? %>
 <div id="error_explanation">
@@ -17,20 +18,20 @@
 </div>
 
 <div class="field">
-  <%= f.label "Level" %>
+  <%= f.label "Current level" %>
   <%= f.select :actual_level, ((0..10).map {|i| [ case i
     when 0
       "0 (Basic)"
     when 5
       "5 (Intermediate)"
     when 10
-      "10 (Advanced)" 
+      "10 (Advanced)"
     else
       i
     end ,i] }) %>
 </div>
 
 <div class="actions">
-  <%= f.submit "Find Matches!" %>
+  <%= f.submit "Save" %>
 </div>
 <% end %>

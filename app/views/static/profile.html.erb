@@ -12,12 +12,12 @@
 					<!-- <li ><a href="unete.html">Únete</a></li> -->
 					<li class="current"><a class="scroll-link " >Profile</a></li>
 					<% if user_signed_in? %>
-						<li>
-							<%= link_to('Find matches', new_match_path) %>
-						</li>
-						<li>
-							<%= link_to('Log out', destroy_user_session_path) %>
-						</li>
+					<li>
+						<%= link_to('Find matches', new_match_path) %>
+					</li>
+					<li>
+						<%= link_to('Log out', destroy_user_session_path) %>
+					</li>
 					<% end %>
 				</ul>
 			</div>
@@ -45,34 +45,39 @@
 				<p><%= @user.email %></p>
 				<p>Skype: <%= @user.skype_username %></p>
 				<p><%= @user.country %></p>
-				<br><br>
+				<br>
               	<p><%= link_to('Edit Pofile', edit_user_registration_path) %><p>
               	<p><%= link_to('My languages', user_languages_path) %><p>
-		</div>
+				<p><%= link_to('My Interests', language_interests_path) %><p>
 
 
-		<div class="span8 center">
-
-			<div class="learn">
-				<br><br>
-				<div class="lead-small left">Matches:</div>
-				<br><br><br><br><br><br>
-				<% @matches.each do |matchuser| %>
-				<div class="span2 gray center">
-					    <img class="user" style="width:150px" src="<%= matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.avatar.url(:medium) %>"> <br><br>
-					I am <strong>learning <%= matchuser.match.match_languages.where(match: matchuser.match, student: @user).first.language.name %></strong> from <strong><%= "#{matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.first_name} #{matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.last_name} " %></strong> (<%= matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.country %>) and <strong> teaching <%= matchuser.match.match_languages.where(match: matchuser.match, teacher: @user).first.language.name %></strong> <br>
-					<strong>Skype:</strong> <%= matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.skype_username %><br>
+					<div class="span8 center">
+						<div class="learn">
+							<br><br>
+							<div class="lead-small left">Matches:</div>
+							<br><br><br><br><br><br>
+							<% @matches.each do |matchuser| %>
+							<div class="span2 gray center">
+								<img class="user" style="width:150px" src="<%= matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.avatar.url(:medium) %>"> <br><br>
+								<% if matchuser.match.confirmed %>
+								I am <strong>learning <%= matchuser.match.match_languages.where(match: matchuser.match, student: @user).first.language.name %></strong> from <strong><%= "#{matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.first_name} #{matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.last_name} " %></strong> (<%= matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.country %>) and <strong> teaching <%= matchuser.match.match_languages.where(match: matchuser.match, teacher: @user).first.language.name %></strong> <br>
+								<strong>Skype:</strong> <%= matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.skype_username %><br>
+								<% else %>
+								<% if matchuser.match.requested_by == current_user.id %>
+								<p><%= "#{matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.first_name} #{matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.last_name} has not confirmed yet." %></p>
+								<% else %>
+								<%= "#{matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.first_name} #{matchuser.match.match_users.where(match: matchuser.match).where.not(user: @user).first.user.last_name} wants to learn #{matchuser.match.match_languages.where(match: matchuser.match, teacher: @user).first.language.name} from you. He can teach you #{matchuser.match.match_languages.where(match: matchuser.match, student: @user).first.language.name}" %>
+								<%= form_tag "/profile/confirm/#{matchuser.match.id}",  method: "post" do %>
+								<%-#= hidden_field_tag(:id, matchuser.match.id) %>
+								<%= submit_tag "Confirm" %>
+								<% end %>
+								<% end %>
+								<% end %>
+							</div>
+							<% end %>
+						</div>
+					</div>
 				</div>
-				<% end %>
 			</div>
 		</div>
-
-
-
-
-
-
-	</div>
-</div>
-</div>
-</section>
+	</section>

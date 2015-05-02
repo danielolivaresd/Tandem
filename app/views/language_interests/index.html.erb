@@ -1,4 +1,5 @@
 <!-- Start Sticky Navigation -->
+<<<<<<< HEAD
   <nav id="mainnav">
     <div class="container">
       <div class="row">
@@ -14,32 +15,67 @@
 
           </ul>
         </div>
+=======
+<nav id="mainnav">
+  <div class="container">
+    <div class="row">
+      <div class="span4"></div>
+      <div class="span8">
+        <ul id="fluid-nav" class="fluid-navigation visible-desktop">
+            <li><%= link_to "Profile", root_path %></li>
+
+            <% if user_signed_in? %>
+                <li>
+                    <%= link_to('Find matches', new_match_path) %>
+                </li>
+                <li>
+                    <%= link_to('Log out', destroy_user_session_path) %>
+                </li>
+            <% end %>
+        </ul>
+>>>>>>> 50ec7fd859ba2962f5a9543afb12d3a560fa57be
       </div>
     </div>
-  </nav>
-
+  </div>
+</nav>
+<!-- End Sticky Navigation -->
 <br><br><br>
-<h1>Listing Language Interests</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="container">
+    <div class="row">
+      <div class="span12 ">
+        <div class="span12 ">
+            <div class="title"> <span class="color-text">I want to learn:</span> </div>
+            <hr>
+            <br>
+        </div>
 
-  <tbody>
-    <% @language_interests.each do |language_interest| %>
-      <tr>
-        <td><%= language_interest.language.name %></td>
-        <td><%= language_interest.actual_level %></td>
-        <td><%= link_to 'Edit', edit_language_interest_path(language_interest) %></td>
-        <td><%= link_to 'Destroy', language_interest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+
+
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @language_interests.each do |language_interest| %>
+              <tr>
+                <td><%= language_interest.language.name %></td>
+                <td><%= language_interest.actual_level %></td>
+                <td><%= link_to 'Edit', edit_language_interest_path(language_interest) %></td>
+                <td><%= link_to 'Delete', language_interest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
 
 <br>
-
-<%= link_to 'New Language interest', new_language_interest_path %>
+<h5><%= link_to 'New Language interest', new_language_interest_path %></h5>
+<br><br><br>
+<br><br><br>
+</div>
+</div>
+</div>
