@@ -7,11 +7,11 @@
       </div>
       <div class="span8">
         <ul id="fluid-nav" class="fluid-navigation visible-desktop">
-          <li><%= link_to "Tandem", root_path %></li>
-
-          <li class="current"><a>Join Now</a></li>
-          <li><%=link_to "Log In", new_user_session_path, class:"scroll-link" %></li>
-
+          <li><%= link_to "Profile", root_path %></li>
+          <li class="current"><a class="scroll-link " >Find Matches</a></li>
+          <li>
+              <%= link_to('Log out', destroy_user_session_path) %>
+          </li>
         </ul>
       </div>
     </div>
@@ -20,26 +20,26 @@
 <!-- End Sticky Navigation -->
 
 <!-- Start About Page -->
-<p id="notice"><%= notice %></p>
 <section  class="page page-gray center">
+    <p id="notice"><%= notice %></p>
   <div class="container">
     <div class="row">
       <div class="span12 ">
-        <div class="title"> <span class="color-text"></span> </div>
+        <div class="title"> <span class="color-text">Matches</span> </div>
         <hr>
-        <div class="lead">These are the best matches for you! Select one please</div>
+        <div class="lead-small">These are the best matches for you! Select one please</div>
         <br><br>
       </div>
 
       <div class="span4 left" >
 
-        <img class="user" style="width:150px" src="<%= @user.avatar.url(:medium) %>"><br> 
+        <img class="user" style="width:150px" src="<%= @user.avatar.url(:medium) %>"><br>
         <br><br>
         <p><%= "#{@user.first_name} #{@user.last_name}" %></p>
         <p><%= @user.email %></p>
         <p>Skype: <%= @user.skype_username %></p>
         <p><%= @user.country %></p>
-        <br><br>  
+        <br><br>
 
       </form>
 

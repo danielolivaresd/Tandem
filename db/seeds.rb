@@ -138,11 +138,11 @@ Language.create!([
 		
 	},
 	{
-		name:"Ucrainian"
+		name:"Ukrainian"
 		
 	},
 	{
-		name:"Viernamese"
+		name:"Vietnamese"
 		
 	}
 	
