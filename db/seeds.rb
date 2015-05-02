@@ -10,7 +10,7 @@ User.create!([
 		state: "San Luis Potosi",
 		city: "San Luis Potosi",
 		sex: "Male",
-		# avatar: URI.parse("http://www.stealthmediagroup.co.uk/wp-content/uploads/2014/05/IMG_3473.jpg"),
+		avatar: URI.parse("http://www.stealthmediagroup.co.uk/wp-content/uploads/2014/05/IMG_3473.jpg"),
 		skype_username: "a@a"
 	},
 	{
@@ -23,7 +23,7 @@ User.create!([
 		state: "San Luis Potosi",
 		city: "San Luis Potosi",
 		sex: "Male",
-		# avatar: URI.parse("http://www.topdrawersoccer.com/the91stminute/wp-content/uploads/2012/08/Random-guy.jpg"),
+		avatar: URI.parse("http://www.topdrawersoccer.com/the91stminute/wp-content/uploads/2012/08/Random-guy.jpg"),
 		skype_username: "b@a"
 	}
 ])

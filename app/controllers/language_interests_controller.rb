@@ -80,6 +80,6 @@ class LanguageInterestsController < ApplicationController
     end
 
     def set_all_languages
-      @all_languages = Language.all
+      @all_languages = Language.all.order(:name)
     end
 end
