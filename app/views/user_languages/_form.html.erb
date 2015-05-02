@@ -25,7 +25,7 @@
     when 5
       "5 (Intermediate)"
     when 10
-      "10 (Advanced)" 
+      "10 (Advanced)"
     else
       i
     end ,i] }) %>
@@ -33,10 +33,11 @@
 
   <div class="field">
     <%= f.check_box :is_native %>
-    <%= f.label "Native language?" %>
+    <%= f.label "Native language?", style: "display:inline;" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Next" %>
+     <br>
+    <%= f.submit "Save" %>
   </div>
 <% end %>
