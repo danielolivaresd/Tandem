@@ -40,6 +40,51 @@ Language.create!([
 		name:"German"
 	},
 	{
+		name:"Chinese"
+	},
+	{
+		name:"Arabic"
+	},
+	{
+		name:"Hindi"
+	},
+	{
+		name:"Bengali"
+	},
+	{
+		name:"Portuguese"
+	},
+	{
+		name:"Russian"
+	},
+	{
+		name:"Japanese"
+	},
+	{
+		name:"Korean"
+	},
+	{
+		name:"Vietnamese"
+	},
+	{
+		name:"Telugu"
+	},
+	{
+		name:"Kiswahili"
+	},
+	{
+		name:"Marathi"
+	},
+	{
+		name:"Tamil"
+	},
+	{
+		name:"Javanese"
+	},
+	{
+		name:"Turkish"
+	},
+	{
 		name:"French"
 	}
 ])
@@ -47,6 +92,21 @@ english = Language.find_by(name:"English")
 spanish = Language.find_by(name:"Spanish")
 german = Language.find_by(name:"German")
 french = Language.find_by(name:"French")
+chinese = Language.find_by(name:"Chinese")
+arabic = Language.find_by(name:"Arabic")
+hindi = Language.find_by(name:"Hindi")
+bengali = Language.find_by(name:"Bengali")
+portuguese = Language.find_by(name:"Portuguese")
+russian = Language.find_by(name:"Russian")
+japanese = Language.find_by(name:"Japanese")
+korean = Language.find_by(name:"Korean")
+vietnamese = Language.find_by(name:"Vietnamese")
+telugu = Language.find_by(name:"Telugu")
+kiswahili = Language.find_by(name:"Kiswahili")
+marathi = Language.find_by(name:"Marathi")
+tamil = Language.find_by(name:"Tamil")
+javanese = Language.find_by(name:"Javanese")
+turkish = Language.find_by(name:"Turkish")
 
 UserLanguage.destroy_all
 UserLanguage.create!([
