@@ -25,28 +25,27 @@
 	<div class="container">
 		<div class="row">
 			<div class="span12 ">
-				<div class="title"> <span class="color-text"><h1>Editing User Language</h1></span> </div>
+				<div class="title"> <span class="color-text">Editing Language</span> </div>
 				<hr>
-				<div class="lead">Almost Done!</div>
 				<br><br>
 			</div>
 
 			<div class="span4 left" >
 
-				<img class="user" style="width:150px" src="<%= @user.avatar.url(:medium) %>"><br> 
+				<img class="user" style="width:150px" src="<%= @user.avatar.url(:medium) %>"><br>
 				<br><br>
 				<p><%= "#{@user.first_name} #{@user.last_name}" %></p>
 				<p><%= @user.email %></p>
 				<p>Skype: <%= @user.skype_username %></p>
 				<p><%= @user.country %></p>
 				<%= link_to "Edit Data", edit_user_registration_path(@user) %>
-				<br><br>	
+				<br><br>
 			</div>
 
 			<div class="span8 left">
 				<table >
 					<tr>
-						<td style="width: 800px;"><h2>I speak this language:</h2></td>
+						<td style="width: 800px;"><h3>I speak this language:</h3></td>
 					</tr>
 
 					<tr >
@@ -59,7 +58,7 @@
 		</div>
 	</div>
 </section>
-<!-- End About Page 
+<!-- End About Page
 
 
 <%= link_to 'Show', @user_language %> |
