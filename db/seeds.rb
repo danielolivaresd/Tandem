@@ -130,6 +130,10 @@ Language.create!([
 		
 	},
 	{
+		name:"Spanish"
+		
+	},
+	{
 		name:"Turkish"
 		
 	},
