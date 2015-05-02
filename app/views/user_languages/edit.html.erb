@@ -8,10 +8,16 @@
 			</div>
 			<div class="span8">
 				<ul id="fluid-nav" class="fluid-navigation visible-desktop">
-					<li><%= link_to "Tandem", root_path %></li>
+					<li><%= link_to "Profile", root_path %></li>
 
-					<li class="current"><a>Join Now</a></li>
-					<li><%=link_to "Log In", new_user_session_path, class:"scroll-link" %></li>
+		            <% if user_signed_in? %>
+		                <li>
+		                    <%= link_to('Find matches', new_match_path) %>
+		                </li>
+		                <li>
+		                    <%= link_to('Log out', destroy_user_session_path) %>
+		                </li>
+		            <% end %>
 
 				</ul>
 			</div>
@@ -38,8 +44,9 @@
 				<p><%= @user.email %></p>
 				<p>Skype: <%= @user.skype_username %></p>
 				<p><%= @user.country %></p>
-				<%= link_to "Edit Data", edit_user_registration_path(@user) %>
-				<br><br>
+				<p><%= link_to('Edit Pofile', edit_user_registration_path) %><p>
+				<p><%= link_to('My languages', user_languages_path) %><p>
+				
 			</div>
 
 			<div class="span8 left">
@@ -48,6 +55,7 @@
 						<td style="width: 800px;"><h3>I speak this language:</h3></td>
 					</tr>
 
+					<br><br>
 					<tr >
 						<td>
 							<%= render 'form' %>
