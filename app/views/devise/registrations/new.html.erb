@@ -9,6 +9,7 @@
         <ul id="fluid-nav" class="fluid-navigation visible-desktop">
           <li><%= link_to "Tandem", root_path, class:"scroll-link" %></li>
 
+
           <li class="current"><a>Join Now</a></li>
           <li><%= link_to "Log In", new_user_session_path, class:"scroll-link" %></li>
 
@@ -57,20 +58,20 @@
 
         <div class="field">
           <% if @validatable %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <em>(<%= @minimum_password_length %> caracteres minimo)</em>
           <% end %><br />
-          <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
+          <%= f.password_field :password, autocomplete: "off", placeholder: "Contrasena" %>
         </div>
 
         <div class="field">
-          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"Confirm password" %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"Confirma contrasena" %>
         </div>
         <div class="field">
-          <%= f.text_field :first_name, :placeholder => "First name" %>
+          <%= f.text_field :first_name, :placeholder => "Nombre" %>
         </div>
 
         <div class="field">
-          <%= f.text_field :last_name, :placeholder => "Last name" %>
+          <%= f.text_field :last_name, :placeholder => "Apellido" %>
         </div>
 
         <div class="field">
@@ -79,35 +80,35 @@
         </div>
 
         <div class="field">
-          <%= f.text_field :skype_username, :placeholder => "Skype username" %>
+          <%= f.text_field :skype_username, :placeholder => "Usuario de skype" %>
         </div>
 
         <div class="field">
-          <%= f.text_field :country, autocomplete: "on", placeholder: "Country" %>
+          <%= f.text_field :country, autocomplete: "on", placeholder: "Pais" %>
         </div>
 
         <div class="field">
-          <%= f.text_field :state, autocomplete: "on", placeholder: "State" %>
+          <%= f.text_field :state, autocomplete: "on", placeholder: "Estado" %>
         </div>
 
         <div class="field">
-          <%= f.text_field :city, autocomplete: "on", placeholder: "City" %>
+          <%= f.text_field :city, autocomplete: "on", placeholder: "Ciudad" %>
         </div>
 
-        <%= f.label :sex %><br /><br />
+        <%= f.label(:sex, "Sexo") %><br /><br />
         <%= f.radio_button(:sex, "Male") %>
-        <%= f.label(:sex, "Male") %>
+        <%= f.label(:sex, "Hombre") %>
         <%= f.radio_button(:sex, "Female") %>
-        <%= f.label(:sex, "Female") %>
+        <%= f.label(:sex, "Mujer") %>
         <%= f.radio_button(:sex, "Other") %>
-        <%= f.label(:sex, "Other") %>
+        <%= f.label(:sex, "Otro") %>
 
         <div class="actions">
-          <%= f.submit "Next" %>
+          <%= f.submit "Siguiente" %>
         </div>
-
+            <!--
         <%= render "devise/shared/links" %>
-<!-- 
+
         <input type="text" placeholder="Name" style="width:700px !important;"><br>
         <input type="text" placeholder="Phone" style="width:700px !important;"><br>
         <input type="text" placeholder="Email" style="width:700px !important;"><br>
