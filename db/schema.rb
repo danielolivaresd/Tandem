@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150502054650) do
+ActiveRecord::Schema.define(version: 20150502161810) do
 
   create_table "language_interests", force: :cascade do |t|
     t.integer  "user_id"
@@ -35,9 +35,8 @@ ActiveRecord::Schema.define(version: 20150502054650) do
     t.integer  "language_id"
     t.integer  "teacher_id"
     t.integer  "student_id"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.boolean  "confirmed",   default: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   add_index "match_languages", ["language_id"], name: "index_match_languages_on_language_id"
@@ -56,8 +55,10 @@ ActiveRecord::Schema.define(version: 20150502054650) do
   create_table "matches", force: :cascade do |t|
     t.date     "from"
     t.date     "to"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "requested_by"
+    t.boolean  "confirmed"
   end
 
   create_table "user_languages", force: :cascade do |t|
