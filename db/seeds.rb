@@ -31,17 +31,118 @@ User.create!([
 Language.destroy_all
 Language.create!([
 	{
+		name:"Afrikaans"
+	},
+	{
+		name:"Albanian"
+	},
+	{
+		name:"Arabic"
+	},
+	{
+		name:"Armenian"
+	},
+	{
+		name:"Basque"
+	},
+	{
+		name:"Bulgarian"
+	},
+	{
+		name:"Czech"
+	},
+	{
+		name:"Chinese"
+	},
+	{
+		name:"Croatian"
+	},
+	{
+		name:"Danish"
+	},
+	{
+		name:"Dutch"
+	},
+
+	{
 		name:"English"
 	},
 	{
-		name:"Spanish"
+		name:"Farsi"
+	},
+	{
+		name:"Finnish"
+	},
+	{
+		name:"French"
 	},
 	{
 		name:"German"
 	},
 	{
-		name:"French"
+		name:"Greek"
+	},
+	{
+		name:"Hebrew"
+	},
+	{
+		name:"Hindi"
+	},
+	{
+		name:"Hungarian"
+	},
+	{
+		name:"Icelandic"
+	},
+	{
+		name:"Italian"
+	},
+	{
+		name:"Japanese"
+
+	},
+	{
+		name:"Korean"
+		
+	},
+	{
+		name:"Kurdish"
+		
+	},
+	{
+		name:"Lithuanian"
+		
+	},
+	{
+		name:"Macedonian"
+		
+	},
+	{
+		name:"Polish"
+		
+	},
+	{
+		name:"Russian"
+		
+	},
+	{
+		name:"Swedish"
+		
+	},
+	{
+		name:"Turkish"
+		
+	},
+	{
+		name:"Ucrainian"
+		
+	},
+	{
+		name:"Viernamese"
+		
 	}
+	
+	
 ])
 english = Language.find_by(name:"English")
 spanish = Language.find_by(name:"Spanish")
@@ -99,3 +200,5 @@ p "#{LanguageInterest.all.count} language interests created."
 p "#{Match.all.count} Matches found"
 p "#{MatchUser.all.count} Match Users found"
 p "#{MatchLanguage.all.count} Match Languages found"
+
+

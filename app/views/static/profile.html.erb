@@ -13,10 +13,10 @@
 					<li class="current"><a class="scroll-link " >Perfil</a></li>
 					<% if user_signed_in? %>
 						<li>
-							<%= link_to('Buscar coincidencias', new_match_path) %>
+							<%= link_to('Find matches', new_match_path) %>
 						</li>
 						<li>
-							<%= link_to('Salir', destroy_user_session_path) %>
+							<%= link_to('Log out', destroy_user_session_path) %>
 						</li>
 					<% end %>
 				</ul>
@@ -54,7 +54,7 @@
 
 			<div class="learn">
 				<br><br>
-				<div class="lead-small left">Matchess:</div>
+				<div class="lead-small left">Matches:</div>
 				<br><br><br><br><br><br>
 				<% @matches.each do |matchuser| %>
 				<div class="span2 gray center">
