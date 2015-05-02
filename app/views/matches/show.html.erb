@@ -1,4 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<%= @match.id %>
+<%= @match.match_languages.first.confirmed %>
 <%= link_to 'Edit', edit_match_path(@match) %> |
 <%= link_to 'Back', matches_path %>
