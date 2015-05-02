@@ -5,7 +5,8 @@
       <div class="span4"></div>
       <div class="span8">
         <ul id="fluid-nav" class="fluid-navigation visible-desktop">
-            <li ><a class="scroll-link " >Profile</a></li>
+            <li><%= link_to "Profile", root_path %></li>
+
             <% if user_signed_in? %>
                 <li>
                     <%= link_to('Find matches', new_match_path) %>
