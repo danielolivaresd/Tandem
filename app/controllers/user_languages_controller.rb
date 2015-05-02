@@ -3,7 +3,7 @@ class UserLanguagesController < ApplicationController
   before_action :set_user
   before_action :authenticate_user!
   before_action :set_all_languages
-
+  skip_before_action :verify_authenticity_token
   # GET /user_languages
   # GET /user_languages.json
   def index
@@ -29,15 +29,15 @@ class UserLanguagesController < ApplicationController
   def create
     @user_language = @user.user_languages.new(user_language_params)
 
-    respond_to do |format|
-      if @user_language.save
-        format.html { redirect_to new_language_interest_path, notice: 'User language was successfully created.' }
-        format.json { render :show, status: :created, location: @user_language }
-      else
-        format.html { render :new }
-        format.json { render json: user_languages_path.errors, status: :unprocessable_entity }
-      end
-    end
+        respond_to do |format|
+          if @user_language.save && @user.language_interests.count == 0
+            format.html { redirect_to new_language_interest_path, notice: 'User language was successfully created.' }
+            format.json { render :show, status: :created, location: @user_language }
+          else
+            format.html { redirect_to user_languages_path}
+            format.json { render json: user_languages_path.errors, status: :unprocessable_entity }
+          end
+        end
   end
 
   # PATCH/PUT /user_languages/1
