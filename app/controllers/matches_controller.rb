@@ -18,6 +18,7 @@ class MatchesController < ApplicationController
   # GET /matches/new
   def new
     @match = Match.new
+    @matches = Match.all
     @possible_matches = Match.possible_for @user
   end
 

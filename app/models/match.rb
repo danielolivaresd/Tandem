@@ -22,4 +22,8 @@ class Match < ActiveRecord::Base
 		result
 	end
 
+	def self.match_exists?(language, teacher, student)
+		MatchLanguage.where(language: language, teacher: teacher, student:student).count > 0 ? true : false
+	end
+
 end
