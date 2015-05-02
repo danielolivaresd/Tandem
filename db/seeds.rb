@@ -148,10 +148,50 @@ Language.create!([
 	
 	
 ])
+afrikaans = Language.find_by(name:"Afrikaans")
+albanian = Language.find_by(name:"Albanian")
+arabic = Language.find_by(name:"Arabic")
+armenian = Language.find_by(name:"Armenian")
+
+basque = Language.find_by(name:"Basque")
+bulgarian = Language.find_by(name:"Bulgarian")
+czech = Language.find_by(name:"Czech")
+chinese = Language.find_by(name:"Chinese")
+
+croatian = Language.find_by(name:"Croatian")
+danish = Language.find_by(name:"Danish")
+dutch = Language.find_by(name:"Dutch")
 english = Language.find_by(name:"English")
-spanish = Language.find_by(name:"Spanish")
-german = Language.find_by(name:"German")
+
+farsi = Language.find_by(name:"Farsi")
+finnish = Language.find_by(name:"Finnish")
 french = Language.find_by(name:"French")
+german = Language.find_by(name:"German")
+
+greek = Language.find_by(name:"Greek")
+hebrew = Language.find_by(name:"Hebrew")
+hindi = Language.find_by(name:"Hindi")
+hungarian = Language.find_by(name:"Hungarian")
+
+icelandic = Language.find_by(name:"Icelandic")
+italian = Language.find_by(name:"Italian")
+japanese = Language.find_by(name:"Japanese")
+korean = Language.find_by(name:"Korean")
+
+kurdish = Language.find_by(name:"Kurdish")
+lithuanian = Language.find_by(name:"Lithuanian")
+macedonian = Language.find_by(name:"Macedonian")
+polish = Language.find_by(name:"Polish")
+
+russian = Language.find_by(name:"Russian")
+swedish = Language.find_by(name:"Swedish")
+spanish = Language.find_by(name:"Spanish")
+turkish = Language.find_by(name:"Turkish")
+
+ukrainian = Language.find_by(name:"Ukrainian")
+vietnamese = Language.find_by(name:"Vietnamese")
+
+
 
 UserLanguage.destroy_all
 UserLanguage.create!([
